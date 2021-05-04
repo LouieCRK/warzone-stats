@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigation = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation)
 
-        bottomNavigation.setOnNavigationItemReselectedListener {
+        bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
                 R.id.ic_home -> makeCurrentFragment(homeFragment)
                 R.id.ic_leaderboard -> makeCurrentFragment(leaderboardFragment)
