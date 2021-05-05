@@ -1,7 +1,6 @@
 package com.louie.warzonestats
 
 import android.os.Bundle
-import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.gson.GsonBuilder
@@ -15,8 +14,6 @@ import java.io.IOException
 open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //Remove title bar
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         this.setContentView(R.layout.activity_main)
 
         val homeFragment = HomeFragment()
