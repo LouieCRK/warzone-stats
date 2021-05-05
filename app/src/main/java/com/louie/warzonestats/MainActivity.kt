@@ -15,6 +15,8 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setContentView(R.layout.activity_main)
+        // removes generic title bar
+        this.supportActionBar?.hide()
 
         val homeFragment = HomeFragment()
         val leaderboardFragment = LeaderboardFragment()
