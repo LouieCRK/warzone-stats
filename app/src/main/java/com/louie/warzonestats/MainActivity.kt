@@ -43,7 +43,8 @@ open class MainActivity : AppCompatActivity() {
 
     fun fetchJson() {
         println("Attempt API fetch")
-
+        // todo - username and platform within the URL need to be generated via user input
+        // todo - username string - '#' should be removed & replaced with '%23' in-order for battle.net usernames to be in correct format
         val url = "https://app.wzstats.gg/v2/player?username=crook%2321832&platform=battle"
         val request = Request.Builder().url(url).build()
         val client = OkHttpClient()
@@ -76,7 +77,7 @@ open class MainActivity : AppCompatActivity() {
 
 
 // todo - remove json paste
-// todo - i am trying to access this data, need kills, kdRatio, wins etc...
+// todo - HOW TO ACCESS?? - data > lifetime > mode > br > properties, need kills, kdRatio, wins etc...
 
 //    {
 //        "uno": "8a5a5f4d-af77-4d60-8eac-fb77fa",
