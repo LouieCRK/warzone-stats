@@ -42,26 +42,26 @@ open class MainActivity : AppCompatActivity() {
     }
 
     fun fetchJson() {
-        println("Attempt API fetch")
         // todo - username and platform within the URL need to be generated via user input
         // todo - username string - '#' should be removed & replaced with '%23' in-order for battle.net usernames to be in correct format
         val url = "https://app.wzstats.gg/v2/player?username=crook%2321832&platform=battle"
+
         val request = Request.Builder().url(url).build()
+
         val client = OkHttpClient()
+
         client.newCall(request).enqueue(object : Callback {
             override fun onResponse(call: Call?, response: Response?) {
+
                 val body = response?.body()?.string()
-                println(body)
-
                 val gson = GsonBuilder().create()
-
                 val playerStats = gson.fromJson(body, Data::class.java)
 
                 println(playerStats.data)
             }
 
             override fun onFailure(call: Call?, e: IOException?) {
-                println("Failed API Request crook")
+                println("Failed API Request")
             }
         })
     }
@@ -72,8 +72,9 @@ open class MainActivity : AppCompatActivity() {
             commit()
         }
 }
-    // todo - implement correct class method to filter needed data
-    class Data(val data: Object)
+
+// todo - implement correct class method to filter needed data
+class Data(val data: Object)
 
 
 // todo - remove json paste
