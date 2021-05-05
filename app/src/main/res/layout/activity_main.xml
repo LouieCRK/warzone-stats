@@ -17,12 +17,18 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="true"
         android:background="@color/grey_1"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+        app:elevation="10dp"
         app:itemBackground="@color/grey_1"
+        app:itemHorizontalTranslationEnabled="true"
+        app:itemIconSize="36dp"
         app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/nav_menu"/>
-
+        app:itemRippleColor="@color/red"
+        app:itemTextColor="@color/red"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/nav_menu" />
+<!--        todo - navigation bar needs to change color on click-->
 </RelativeLayout>
