@@ -4,16 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.gson.GsonBuilder
-import com.louie.warzonestats.models.player.PlayerModel
-import com.louie.warzonestats.networking.services.PlayerNetworkService
 import com.louie.warzonestats.ui.fragments.FaveFragment
 import com.louie.warzonestats.ui.fragments.HomeFragment
 import com.louie.warzonestats.ui.fragments.LeaderboardFragment
 import com.louie.warzonestats.ui.fragments.StreamerFragment
 import com.louie.warzonestats.ui.profile.ProfileActivity
-import okhttp3.*
-import java.io.IOException
 
 open class MainActivity: AppCompatActivity() {
 

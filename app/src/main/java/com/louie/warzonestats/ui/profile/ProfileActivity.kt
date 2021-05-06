@@ -1,7 +1,7 @@
 package com.louie.warzonestats.ui.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.louie.warzonestats.R
 import com.louie.warzonestats.models.player.PlayerModel
 import com.louie.warzonestats.services.PlayerService
