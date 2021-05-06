@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">8
+
+            <ImageView
+                android:id="@+id/wzLogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:foregroundGravity="center_vertical|clip_horizontal|center"
+                android:scaleType="center"
+                app:srcCompat="@mipmap/ic_logo_foreground" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:background="@color/grey_3"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.fragments.HomeFragment.HomeFragment">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey_3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/spacer"
+                        android:layout_width="425dp"
+                        android:layout_height="20dp"
+                        android:clickable="false"
+                        android:translationY="-5.4dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="3px" />
+
+                    <TextView
+                        android:id="@+id/profilePage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:capitalize="words"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:shadowColor="#000000"
+                        android:shadowDx="100"
+                        android:shadowDy="100"
+                        android:text="PROFILE"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

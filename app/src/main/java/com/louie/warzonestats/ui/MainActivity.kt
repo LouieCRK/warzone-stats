@@ -7,10 +7,10 @@ import androidx.fragment.app.Fragment
 import com.google.gson.GsonBuilder
 import com.louie.warzonestats.models.player.PlayerModel
 import com.louie.warzonestats.networking.services.PlayerNetworkService
-import com.louie.warzonestats.ui.fragments.FaveFragment.FaveFragment
-import com.louie.warzonestats.ui.fragments.HomeFragment.HomeFragment
-import com.louie.warzonestats.ui.fragments.LeaderboardFragment.LeaderboardFragment
-import com.louie.warzonestats.ui.fragments.StreamerFragment.StreamerFragment
+import com.louie.warzonestats.ui.fragments.FaveFragment
+import com.louie.warzonestats.ui.fragments.HomeFragment
+import com.louie.warzonestats.ui.fragments.LeaderboardFragment
+import com.louie.warzonestats.ui.fragments.StreamerFragment
 import com.louie.warzonestats.ui.profile.ProfileActivity
 import okhttp3.*
 import java.io.IOException
