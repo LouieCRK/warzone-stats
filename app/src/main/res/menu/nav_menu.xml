@@ -3,23 +3,28 @@
 
     <item
         android:id="@+id/ic_home"
-        android:checkable="true"
+        android:enabled="true"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="Home"
+        android:titleCondensed=" "
+        android:visible="true" />
 
     <item
         android:id="@+id/ic_leaderboard"
+        android:enabled="true"
         android:icon="@drawable/ic_leaderboard"
-        android:title="Leaderboards"/>
+        android:title="Leaderboards" />
 
     <item
         android:id="@+id/ic_streamer"
+        android:enabled="true"
         android:icon="@drawable/ic_streamer"
-        android:title="Steamers"/>
+        android:title="Steamers" />
 
     <item
         android:id="@+id/ic_fave"
+        android:enabled="true"
         android:icon="@drawable/ic_fave"
-        android:title="Favourites"/>
+        android:title="Favourites" />
 
 </menu>
