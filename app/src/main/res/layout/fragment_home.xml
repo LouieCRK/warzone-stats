@@ -11,7 +11,7 @@
         android:id="@+id/appbar"
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content">8
 
         <ImageView
             android:id="@+id/wzLogo"
@@ -49,6 +49,7 @@
                     android:layout_width="425dp"
                     android:layout_height="20dp"
                     android:clickable="false"
+                    android:translationY="-5.4dp"
                     app:strokeColor="@color/red"
                     app:strokeWidth="3px" />
 
@@ -56,7 +57,6 @@
                     android:id="@+id/leaderboardText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
                     android:capitalize="words"
                     android:fontFamily="@font/news_cycle_bold"
                     android:shadowColor="#000000"
@@ -74,6 +74,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@color/grey_3"
                     android:gravity="center"
+                    android:padding="9dp"
                     android:visibility="visible">
 
                     <Button
@@ -82,6 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:elevation="@dimen/cardview_compat_inset_shadow"
+                        android:fontFamily="@font/news_cycle_bold"
                         android:insetRight="8dp"
                         android:minHeight="55dp"
                         android:text="PSN"
@@ -99,6 +101,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:elevation="@dimen/cardview_compat_inset_shadow"
+                        android:fontFamily="@font/news_cycle_bold"
                         android:minHeight="55dp"
                         android:text="BATTLE.NET"
                         android:textSize="15dp"
@@ -115,6 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:elevation="@dimen/cardview_compat_inset_shadow"
+                        android:fontFamily="@font/news_cycle_bold"
                         android:insetLeft="8dp"
                         android:minHeight="55dp"
                         android:text="XBL"
@@ -135,6 +139,8 @@
                     android:layout_weight="1"
                     android:background="@color/grey_3"
                     android:gravity="center"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="5dp"
                     android:visibility="visible">
 
                     <ImageView
@@ -146,8 +152,8 @@
                         android:maxWidth="10px"
                         android:maxHeight="10px"
                         android:scaleType="centerInside"
-                        android:tint="@color/red"
-                        app:srcCompat="@android:drawable/stat_sys_warning" />
+                        app:srcCompat="@android:drawable/stat_sys_warning"
+                        app:tint="@color/red" />
 
                     <TextView
                         android:id="@+id/warningMessage"
@@ -162,32 +168,47 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/userEntry_container"
-                    android:layout_width="1300px"
-                    android:layout_height="55dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="1350px"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:minHeight="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="ENTER USERNAME..."
                     android:textColorHint="#FFFFFF"
-                    app:boxBackgroundColor="@color/grey_4"
-                    app:boxCornerRadiusBottomEnd="25dp"
-                    app:boxCornerRadiusBottomStart="25dp"
-                    app:boxCornerRadiusTopEnd="25dp"
-                    app:boxCornerRadiusTopStart="25dp"
-                    app:boxStrokeColor="@color/red"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:boxStrokeColor="@color/white"
                     app:boxStrokeErrorColor="@color/red"
-                    app:boxStrokeWidth="10dp"
-                    app:expandedHintEnabled="false"
+                    app:boxStrokeWidth="3dp"
+                    app:counterEnabled="false"
+                    app:errorEnabled="false"
+                    app:expandedHintEnabled="true"
+                    app:helperTextEnabled="false"
                     app:hintAnimationEnabled="false"
-                    app:hintTextColor="#000000">
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/red"
+                    app:passwordToggleEnabled="false">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/userEntry"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:backgroundTint="@color/grey_3"
+                        android:capitalize="words"
+                        android:elegantTextHeight="false"
                         android:fontFamily="@font/news_cycle_bold"
-                        android:hint="ENTER USERNAME..."
+                        android:inputType="text"
+                        android:paddingStart="25dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
                         android:textAlignment="viewStart"
+                        android:textColor="#FFFFFF"
                         android:textColorHint="#FFFFFF"
-                        android:textSize="20dp" />
+                        android:textSize="18dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -196,14 +217,15 @@
                     android:layout_width="275dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:drawablePadding="0dp"
                     android:elevation="@dimen/cardview_compat_inset_shadow"
+                    android:fontFamily="@font/news_cycle_bold"
                     android:insetRight="8dp"
                     android:minHeight="55dp"
                     android:text="Search profile"
                     android:textSize="18dp"
                     app:cornerRadius="25px"
                     app:icon="@android:drawable/ic_menu_search"
-                    app:iconPadding="5dp"
                     app:iconSize="25dp"
                     app:iconTint="#BA0647"
                     app:strokeColor="#FFFFFF"
