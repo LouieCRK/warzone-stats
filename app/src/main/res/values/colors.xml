@@ -8,6 +8,7 @@
 
     // app main colours
     <color name="red">#901240</color>
+    <color name="grey_0">#5E5E5E</color>
     <color name="grey_1">#3C3C3C</color>
     <color name="grey_2">#303030</color>
     <color name="grey_3">#242424</color>

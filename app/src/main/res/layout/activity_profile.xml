@@ -60,7 +60,7 @@
                         app:strokeWidth="3px" />
 
                     <TextView
-                        android:id="@+id/profilePage"
+                        android:id="@+id/profile_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -76,7 +76,7 @@
                         android:textSize="20dp" />
 
                     <LinearLayout
-                        android:id="@+id/boxes1"
+                        android:id="@+id/fave_layout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -85,7 +85,7 @@
                         android:paddingRight="50dp">
 
                         <TextView
-                            android:id="@+id/username"
+                            android:id="@+id/username_text"
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:capitalize="words"
@@ -118,10 +118,10 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/lifetimeStats"
+                        android:id="@+id/lifetimeStats_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="12dp"
                         android:capitalize="words"
                         android:fontFamily="@font/news_cycle_bold"
                         android:shadowColor="#000000"
@@ -134,10 +134,10 @@
                         android:textSize="18dp" />
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/box_kd"
                         android:layout_width="380dp"
                         android:layout_height="100sp"
-                        android:background="@drawable/box_bronze"
+                        android:background="@drawable/box_legend"
                         android:fontFamily="@font/news_cycle_bold"
                         android:shadowColor="#000000"
                         android:shadowDx="1"
@@ -149,7 +149,7 @@
                         android:textColor="#FFFFFF" />
 
                     <LinearLayout
-                        android:id="@+id/boxes1"
+                        android:id="@+id/league_box_layout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -159,7 +159,7 @@
                         android:paddingRight="16dp">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/box_wins"
                             android:layout_width="380dp"
                             android:layout_height="100sp"
                             android:layout_marginRight="5dp"
@@ -176,7 +176,7 @@
                             android:textColor="#FFFFFF" />
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/box_kills"
                             android:layout_width="380dp"
                             android:layout_height="100sp"
                             android:layout_weight="1"
@@ -194,7 +194,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/boxes1"
+                        android:id="@+id/league_box_layout2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -205,12 +205,12 @@
                         android:paddingRight="16dp">
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/box_winrate"
                             android:layout_width="380dp"
                             android:layout_height="100sp"
                             android:layout_marginRight="5dp"
                             android:layout_weight="1"
-                            android:background="@drawable/box_silver"
+                            android:background="@drawable/box_bronze"
                             android:fontFamily="@font/news_cycle_bold"
                             android:shadowColor="#000000"
                             android:shadowDx="1"
@@ -222,11 +222,11 @@
                             android:textColor="#FFFFFF" />
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/box_killsPerGame"
                             android:layout_width="380dp"
                             android:layout_height="100sp"
                             android:layout_weight="1"
-                            android:background="@drawable/box_legend"
+                            android:background="@drawable/box_silver"
                             android:fontFamily="@font/news_cycle_bold"
                             android:shadowColor="#000000"
                             android:shadowDx="1"
@@ -236,7 +236,121 @@
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#FFFFFF" />
+
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/weeklyStatsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:capitalize="words"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:shadowColor="#000000"
+                        android:shadowDx="100"
+                        android:shadowDy="100"
+                        android:text="WEEKLY STATS"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/matchCount_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:capitalize="words"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:shadowColor="#000000"
+                        android:shadowDx="100"
+                        android:shadowDy="100"
+                        android:text="$MATCHES "
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/red"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/weeklyStats_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:id="@+id/box_weekly_wins"
+                            android:layout_width="380dp"
+                            android:layout_height="100sp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_grey"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="10"
+                            android:text="KD"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/box_weekly_killsPerGame"
+                            android:layout_width="380dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_grey"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="10"
+                            android:text="KILLS / GAME"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/box_weekly_kills"
+                            android:layout_width="380dp"
+                            android:layout_height="100sp"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_grey"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="10"
+                            android:text="KILLS"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/weeklyStatsText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:capitalize="words"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:shadowColor="#000000"
+                        android:shadowDx="100"
+                        android:shadowDy="100"
+                        android:text="RECENT GAMES - LEAGUE DISTRIBUTION"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
 
                 </LinearLayout>
             </ScrollView>
