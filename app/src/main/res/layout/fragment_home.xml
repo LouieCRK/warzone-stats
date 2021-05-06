@@ -83,6 +83,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:elevation="@dimen/cardview_compat_inset_shadow"
+                        android:enabled="true"
+                        android:focusable="auto"
                         android:fontFamily="@font/news_cycle_bold"
                         android:insetRight="8dp"
                         android:minHeight="55dp"

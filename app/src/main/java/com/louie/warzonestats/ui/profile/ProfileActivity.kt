@@ -29,6 +29,7 @@ class ProfileActivity : AppCompatActivity() {
         println("$lifetime_KD, $lifetime_Wins, $lifetime_Kills, $lifetime_WinRate, $lifetime_KillsPerGame}")
 
         println("K/D Ratio: ${lifetimeStatsBR.kdRatio}")
+
     }
 }
 

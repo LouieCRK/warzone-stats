@@ -133,20 +133,60 @@
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/box_kd"
+                    <RelativeLayout
                         android:layout_width="380dp"
-                        android:layout_height="100sp"
-                        android:background="@drawable/box_legend"
-                        android:fontFamily="@font/news_cycle_bold"
-                        android:shadowColor="#000000"
-                        android:shadowDx="1"
-                        android:shadowDy="1"
-                        android:shadowRadius="10"
-                        android:text="KD"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="#FFFFFF" />
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/box_kd"
+                            android:layout_width="380dp"
+                            android:layout_height="100sp"
+                            android:background="@drawable/box_legend"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="10"
+                            android:text="KD"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/box_test"
+                            android:layout_width="140dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/box_plate"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="@color/grey_0"
+                            android:shadowDx="1"
+                            android:shadowDy=""
+                            android:shadowRadius="10"
+                            android:text="$KD"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textSize="27dp" />
+
+                        <TextView
+                            android:id="@+id/box_league1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:paddingBottom="4dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="10"
+                            android:text="$LEAGUE"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:id="@+id/league_box_layout"
@@ -351,6 +391,14 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_battle"></ImageView>
 
                 </LinearLayout>
             </ScrollView>
