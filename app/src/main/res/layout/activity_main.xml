@@ -6,22 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/nav_wrapper"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:background="@color/grey_3"
-        android:layout_centerHorizontal="@+id/bottom_navigation"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        style=" "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="true"
         android:background="@color/grey_1"
-        android:elevation="@dimen/cardview_compat_inset_shadow"
         app:elevation="10dp"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconSize="36dp"
@@ -29,6 +20,15 @@
         app:itemRippleColor="@color/red"
         app:itemTextColor="@color/red"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/nav_menu" />
-<!--        todo - navigation bar needs to change color on click-->
+        app:menu="@menu/nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <ScrollView
+        android:id="@+id/nav_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_3"/>
+
+    <!--        todo - navigation bar needs to change color on click-->
 </RelativeLayout>

@@ -18,6 +18,19 @@ open class MainActivity: AppCompatActivity() {
         // removes generic title bar
         this.supportActionBar?.hide()
 
+        // todo - searchButton returns NULL, reason is because my searchButton is within 'HomeFragment' Unsure how to resolve
+        // todo - purpose of this is to change to 'SecondActivity' when user clicks 'searchButton'
+//        // variable in reference to searchButton within homepage
+//        val searchButton = findViewById<Button>(R.id.searchButton)
+//        // use searchButton and set a listener for user clicks
+//
+//        searchButton.setOnClickListener{
+//            // set the intent to show SecondActivity
+//            val intent = Intent(this, SecondActivity::class.java)
+//
+//            startActivity(intent)
+//        }
+
         // assign fragments to variables
         val homeFragment = HomeFragment()
         val leaderboardFragment = LeaderboardFragment()
@@ -57,7 +70,9 @@ open class MainActivity: AppCompatActivity() {
                 val gson = GsonBuilder().create()
                 val playerStats = gson.fromJson(body, Data::class.java)
 
-                println(playerStats.toString())
+                println(playerStats.data.toString())
+                // thought this would work but doesn't
+//                playerStats.data.lifetime.mode.br.properties
             }
 
             override fun onFailure(call: Call?, e: IOException?) {
@@ -73,9 +88,8 @@ open class MainActivity: AppCompatActivity() {
         }
 }
 
-// todo - implement correct class method to filter needed data
+// todo - class needs to be in the correct format to get usable object???
 class Data(val data: Object)
-
 
 // todo - remove json paste
 // todo - HOW TO ACCESS?? - data > lifetime > mode > br > properties, need kills, kdRatio, wins etc...
