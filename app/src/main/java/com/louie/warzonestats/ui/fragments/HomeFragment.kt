@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
                 mainActivity.navigateToPlayerProfile()
             }
         }
-        return inflatedLayout;
+        return inflatedLayout
     }
 }
 
