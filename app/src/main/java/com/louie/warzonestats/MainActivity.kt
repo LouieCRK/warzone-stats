@@ -11,18 +11,19 @@ import com.louie.warzonestats.fragments.StreamerFragment
 import okhttp3.*
 import java.io.IOException
 
-open class MainActivity : AppCompatActivity() {
+open class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setContentView(R.layout.activity_main)
         // removes generic title bar
         this.supportActionBar?.hide()
 
+        // assign fragments to variables
         val homeFragment = HomeFragment()
         val leaderboardFragment = LeaderboardFragment()
         val streamerFragment = StreamerFragment()
         val faveFragment = FaveFragment()
-
+        // initiate with home fragment
         makeCurrentFragment(homeFragment)
 
         val bottomNavigation =
@@ -40,7 +41,7 @@ open class MainActivity : AppCompatActivity() {
         fetchJson()
     }
 
-    fun fetchJson() {
+    private fun fetchJson() {
         // todo - username and platform within the URL need to be generated via user input
         // todo - username string - '#' should be removed & replaced with '%23' in-order for battle.net usernames to be in correct format
         val url = "https://app.wzstats.gg/v2/player?username=crook%2321832&platform=battle"
@@ -56,7 +57,7 @@ open class MainActivity : AppCompatActivity() {
                 val gson = GsonBuilder().create()
                 val playerStats = gson.fromJson(body, Data::class.java)
 
-                println(playerStats.data)
+                println(playerStats.toString())
             }
 
             override fun onFailure(call: Call?, e: IOException?) {
