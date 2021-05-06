@@ -315,9 +315,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_fave" />
-                            <entry key="sourceFile" value="C:\Users\Crook\Documents\GitHub\warzone-stats" />
+                            <entry key="outputName" value="ic_battle" />
+                            <entry key="sourceFile" value="C:\Users\Crook\Documents\University Work\Mobile Applications\Warzone Tracker\Finished Assets\battle.svg" />
                           </map>
                         </option>
                       </PersistentState>
