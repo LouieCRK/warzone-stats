@@ -13,6 +13,9 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+        // removes generic title bar
+        this.supportActionBar?.hide()
+
         playerModel = PlayerService.currentPlayerModel
 
         var lifetimeStatsBR = playerModel!!.data.lifetime.mode.br.properties

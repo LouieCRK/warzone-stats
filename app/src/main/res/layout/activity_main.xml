@@ -30,5 +30,4 @@
         android:layout_height="match_parent"
         android:background="@color/grey_3"/>
 
-    <!--        todo - navigation bar needs to change color on click-->
 </RelativeLayout>
