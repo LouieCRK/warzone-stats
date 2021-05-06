@@ -20,16 +20,16 @@ open class MainActivity: AppCompatActivity() {
 
         // todo - searchButton returns NULL, reason is because my searchButton is within 'HomeFragment' Unsure how to resolve
         // todo - purpose of this is to change to 'SecondActivity' when user clicks 'searchButton'
-//        // variable in reference to searchButton within homepage
-//        val searchButton = findViewById<Button>(R.id.searchButton)
-//        // use searchButton and set a listener for user clicks
-//
-//        searchButton.setOnClickListener{
-//            // set the intent to show SecondActivity
-//            val intent = Intent(this, SecondActivity::class.java)
-//
-//            startActivity(intent)
-//        }
+        // variable in reference to searchButton within homepage
+        val searchButton = findViewById<Button>(R.id.searchButton)
+        // use searchButton and set a listener for user clicks
+
+        searchButton.setOnClickListener{
+            // set the intent to show SecondActivity
+            val intent = Intent(this, SecondActivity::class.java)
+
+            startActivity(intent)
+        }
 
         // assign fragments to variables
         val homeFragment = HomeFragment()
@@ -90,34 +90,3 @@ open class MainActivity: AppCompatActivity() {
 
 // todo - class needs to be in the correct format to get usable object???
 class Data(val data: Object)
-
-// todo - remove json paste
-// todo - HOW TO ACCESS?? - data > lifetime > mode > br > properties, need kills, kdRatio, wins etc...
-
-//    {
-//        "uno": "8a5a5f4d-af77-4d60-8eac-fb77fa",
-//        "data": {
-//            "uno": "crook#21832",
-//            "level": 100,
-//            "weekly": {
-//            "lifetime": {
-//                "all": {
-//                "mode": {
-//                    "br": {
-//                        "properties": {
-//                            "cash": 0,
-//                            "wins": 240,
-//                            "downs": 14500,
-//                            "kills": 13904,
-//                            "score": 12747345,
-//                            "deaths": 6736,
-//                            "tokens": 0,
-//                            "topTen": 1016,
-//                            "kdRatio": 2.0641330166270784,
-//                            "revives": 1451,
-//                            "topFive": 658,
-//                            "contracts": 2944,
-//                            "timePlayed": 2804539,
-//                            "gamesPlayed": 2434,
-//                            "topTwentyFive": 1798,
-//                            "scorePerMinute": 272.7153018731421

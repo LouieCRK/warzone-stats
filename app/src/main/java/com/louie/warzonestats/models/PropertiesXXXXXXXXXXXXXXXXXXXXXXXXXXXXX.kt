@@ -1,0 +1,32 @@
+package com.louie.warzonestats.models
+
+data class PropertiesXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(
+    val assists: Int,
+    val avgLifeTime: Double,
+    val damageDone: Int,
+    val damageTaken: Int,
+    val deaths: Int,
+    val distanceTraveled: Double,
+    val executions: Int,
+    val gulagDeaths: Int,
+    val gulagKills: Int,
+    val headshotPercentage: Double,
+    val headshots: Int,
+    val kdRatio: Double,
+    val kills: Int,
+    val killsPerGame: Int,
+    val matchesPlayed: Int,
+    val nearmisses: Int,
+    val objectiveBrCacheOpen: Int,
+    val objectiveBrDownEnemyCircle1: Int,
+    val objectiveBrDownEnemyCircle2: Int,
+    val objectiveBrKioskBuy: Int,
+    val objectiveBrMissionPickupTablet: Int,
+    val objectiveLastStandKill: Int,
+    val objectiveTeamWiped: Int,
+    val score: Int,
+    val scorePerGame: Int,
+    val scorePerMinute: Double,
+    val timePlayed: Int,
+    val wallBangs: Int
+)
