@@ -161,7 +161,7 @@
                             android:fontFamily="@font/news_cycle_bold"
                             android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
-                            android:shadowDy=""
+                            android:shadowDy="1"
                             android:shadowRadius="10"
                             android:text="$KD"
                             android:textAlignment="center"
