@@ -58,6 +58,7 @@ class ProfileActivity : AppCompatActivity() {
             username = user_battle as String
         }
 
+        // todo - continue setting logic for all lifetime stats
         // logic to set lifetime KD to corresponding league
         if (lifetime_KD >= 3.57) {
             kd_league = "legend"
