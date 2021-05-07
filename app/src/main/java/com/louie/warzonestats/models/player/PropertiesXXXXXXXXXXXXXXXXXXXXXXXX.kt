@@ -31,7 +31,7 @@ data class PropertiesXXXXXXXXXXXXXXXXXXXXXXXX(
     val objectiveReviver: Int,
     val objectiveTeamWiped: Int,
     val score: Int,
-    val scorePerGame: Int,
+    val scorePerGame: Double,
     val scorePerMinute: Double,
     val timePlayed: Int,
     val wallBangs: Int

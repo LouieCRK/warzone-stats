@@ -14,7 +14,7 @@ data class PropertiesXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(
     val headshots: Int,
     val kdRatio: Double,
     val kills: Int,
-    val killsPerGame: Int,
+    val killsPerGame: Double,
     val matchesPlayed: Int,
     val nearmisses: Int,
     val objectiveBrCacheOpen: Int,
@@ -25,7 +25,7 @@ data class PropertiesXXXXXXXXXXXXXXXXXXXXXXXXXXXXX(
     val objectiveLastStandKill: Int,
     val objectiveTeamWiped: Int,
     val score: Int,
-    val scorePerGame: Int,
+    val scorePerGame: Double,
     val scorePerMinute: Double,
     val timePlayed: Int,
     val wallBangs: Int
