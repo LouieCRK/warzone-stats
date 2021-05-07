@@ -23,7 +23,7 @@ class HomeFragment : Fragment() {
         val inflatedLayout = inflater.inflate(R.layout.fragment_home, container, false)
         val searchButton = inflatedLayout.findViewById<Button>(R.id.searchButton)
         userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
-        // todo: implement selection of button
+        // todo: implement selection of button according to platform 'psn', 'battle', 'xbl'
         searchButton.setOnClickListener {
             val username = userEntry.text.toString().replace("#", "%23")
             val platform = "battle"

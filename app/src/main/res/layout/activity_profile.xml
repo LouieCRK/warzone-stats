@@ -86,10 +86,11 @@
 
                         <TextView
                             android:id="@+id/username_text"
-                            android:layout_width="100dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:capitalize="words"
                             android:fontFamily="@font/news_cycle_bold"
+                            android:paddingRight="15dp"
                             android:shadowColor="#000000"
                             android:shadowDx="100"
                             android:shadowDy="100"
@@ -153,7 +154,7 @@
                             android:textColor="#FFFFFF" />
 
                         <TextView
-                            android:id="@+id/box_test"
+                            android:id="@+id/lifetime_kd_text"
                             android:layout_width="140dp"
                             android:layout_height="50dp"
                             android:layout_centerInParent="true"
@@ -170,7 +171,7 @@
                             android:textSize="27dp" />
 
                         <TextView
-                            android:id="@+id/box_league1"
+                            android:id="@+id/league_kd_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentBottom="true"
