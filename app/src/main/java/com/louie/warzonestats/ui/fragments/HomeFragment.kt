@@ -26,7 +26,7 @@ class HomeFragment : Fragment() {
         // todo: implement selection of button according to platform 'psn', 'battle', 'xbl'
         searchButton.setOnClickListener {
             val username = userEntry.text.toString().replace("#", "%23")
-            val platform = "battle"
+            val platform = "xbl"
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
             if(playerModel == null){
                 print("something went wrong")

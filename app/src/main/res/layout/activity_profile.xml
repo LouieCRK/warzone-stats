@@ -605,10 +605,11 @@
 
 
                     <TextView
-                        android:id="@+id/weeklyStatsText3"
+                        android:id="@+id/gameDistribution"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
                         android:capitalize="words"
                         android:fontFamily="@font/news_cycle_bold"
@@ -621,13 +622,142 @@
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/game_Distribution"
+                        android:layout_width="380dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gamesBox_bronze"
+                            android:layout_width="20px"
+                            android:layout_height="150dp"
+                            android:layout_gravity="top"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_bronze"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:maxHeight="20dp"
+                            android:minHeight="0dp"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"
+                            android:text="BRONZE"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14dp"
+                            tools:ignore="RtlCompat" />
+
+                        <TextView
+                            android:id="@+id/gamesBox_silver"
+                            android:layout_width="20px"
+                            android:layout_height="150dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_silver"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"
+                            android:text="SILVER"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/gamesBox_gold"
+                            android:layout_width="20px"
+                            android:layout_height="200dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_gold"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"
+                            android:text="GOLD"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/gamesBox_diamond"
+                            android:layout_width="20px"
+                            android:layout_height="200dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_diamond"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"
+                            android:text="DIAMOND"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/gamesBox_master"
+                            android:layout_width="20px"
+                            android:layout_height="200dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/chart_master"
+                            android:fontFamily="@font/news_cycle_bold"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="5"
+                            android:text="MASTER"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bottomChartBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/grey_0"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="4"
+                        android:translationY="-5dp" />
+
+                    <TextView
+                        android:id="@+id/text_20matches"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ic_battle"></ImageView>
+                        android:capitalize="words"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:shadowColor="#000000"
+                        android:shadowDx="100"
+                        android:shadowDy="100"
+                        android:text="LAST 20 MATCHES"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18dp" />
 
                 </LinearLayout>
             </ScrollView>

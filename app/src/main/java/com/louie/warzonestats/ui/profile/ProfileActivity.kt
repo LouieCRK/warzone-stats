@@ -1,19 +1,23 @@
 package com.louie.warzonestats.ui.profile
 
+import android.icu.text.NumberFormat
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.louie.warzonestats.R
 import com.louie.warzonestats.models.player.PlayerModel
 import com.louie.warzonestats.services.PlayerService
+import java.util.*
 
 
 class ProfileActivity : AppCompatActivity() {
 
     var playerModel : PlayerModel? = null
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -34,7 +38,7 @@ class ProfileActivity : AppCompatActivity() {
         // lifetime player stats - assign data to variables
         var lifetime_KD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
         var lifetime_Wins = lifetimeStatsBR.wins
-        var lifetime_Kills = lifetimeStatsBR.kills
+        var lifetime_Kills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
         var lifetime_WinRate = String.format("%.2f", lifetimeStatsBR.gamesPlayed.toDouble() / lifetimeStatsBR.wins.toDouble())
         var lifetime_KillsPerGame = String.format("%.2f", lifetimeStatsBR.kills.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble())
 
@@ -75,9 +79,10 @@ class ProfileActivity : AppCompatActivity() {
                 // set player lifetime KD to textView
                 var viewLeagueKD = findViewById<View>(R.id.league_kd_text) as TextView
                 viewLeagueKD.text = kd_league.capitalize()
-                // set background plate as drawable league gradient
-                var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-                viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
+                // todo - work out how to dynamically change box colours in relation to league
+//                // set background plate as drawable league gradient
+//                var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
+//                viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
             // WINS
                 // set player lifetime wins to textView
                 var viewLifetimeWins = findViewById<View>(R.id.lifetime_wins_text) as TextView
@@ -101,7 +106,7 @@ class ProfileActivity : AppCompatActivity() {
             // MATCHES PLAYED
                 // set player weekly matches played to textView
                 var viewWeeklyMatches = findViewById<View>(R.id.weeklyMatches_text) as TextView
-                viewWeeklyMatches.text = weekly_Matches.toString()
+                viewWeeklyMatches.text = ("$weekly_Matches MATCHES PLAYED")
             // KD
                 // set player weekly matches played to textView
                 var viewWeeklyKD = findViewById<View>(R.id.weeklyKD_text) as TextView
