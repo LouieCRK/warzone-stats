@@ -238,9 +238,8 @@
 
                         <TextView
                             android:id="@+id/lifetime_wins_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="115dp"
                             android:layout_height="50dp"
-                            android:layout_weight=""
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingLeft="5dp"
@@ -254,7 +253,7 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="27dp"
-                            android:translationX="52dp"
+                            android:translationX="36.5dp"
                             android:translationY="30dp" />
 
                         <TextView
@@ -276,9 +275,8 @@
 
                         <TextView
                             android:id="@+id/lifetime_kills_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="115dp"
                             android:layout_height="50dp"
-                            android:layout_weight=""
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingLeft="5dp"
@@ -292,7 +290,7 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="27dp"
-                            android:translationX="242dp"
+                            android:translationX="229dp"
                             android:translationY="30dp" />
                         <TextView
                             android:id="@+id/league_kills_text"
@@ -363,9 +361,8 @@
                         </LinearLayout>
                         <TextView
                             android:id="@+id/lifetime_winrate_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="115dp"
                             android:layout_height="50dp"
-                            android:layout_weight=""
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingLeft="5dp"
@@ -379,7 +376,7 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="27dp"
-                            android:translationX="52dp"
+                            android:translationX="35dp"
                             android:translationY="30dp" />
 
                         <TextView
@@ -401,9 +398,8 @@
 
                         <TextView
                             android:id="@+id/lifetime_killsPerGame_text"
-                            android:layout_width="wrap_content"
+                            android:layout_width="115dp"
                             android:layout_height="50dp"
-                            android:layout_weight=""
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingLeft="5dp"
@@ -412,13 +408,13 @@
                             android:shadowDx="1"
                             android:shadowDy="1"
                             android:shadowRadius="10"
-                            android:text="$KILLS/GAME"
+                            android:text="$KPG"
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="27dp"
                             android:layout_alignParentRight="true"
-                            android:translationX="-10dp"
+                            android:translationX="-37dp"
                             android:translationY="30dp" />
                         <TextView
                             android:id="@+id/league_killsPerGame_text"
@@ -457,7 +453,7 @@
                         android:textSize="18dp" />
 
                     <TextView
-                        android:id="@+id/matchCount_text"
+                        android:id="@+id/weeklyMatches_text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -473,67 +469,140 @@
                         android:textColor="@color/red"
                         android:textSize="14dp" />
 
-                    <LinearLayout
-                        android:id="@+id/weeklyStats_layout"
-                        android:layout_width="match_parent"
+                    <RelativeLayout
+                        android:layout_width="412dp"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="16dp">
+                        android:layout_weight="2">
+
+                        <LinearLayout
+                            android:id="@+id/weeklyStats_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:id="@+id/box_weekly_wins"
+                                android:layout_width="380dp"
+                                android:layout_height="100sp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/box_grey"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:shadowColor="#000000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="KD"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/box_weekly_killsPerGame"
+                                android:layout_width="380dp"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/box_grey"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:shadowColor="#000000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="KILLS / GAME"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:id="@+id/box_weekly_kills"
+                                android:layout_width="380dp"
+                                android:layout_height="100sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/box_grey"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:shadowColor="#000000"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="KILLS"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
 
                         <TextView
-                            android:id="@+id/box_weekly_wins"
-                            android:layout_width="380dp"
-                            android:layout_height="100sp"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/box_grey"
+                            android:id="@+id/weeklyKills_text"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:shadowColor="#000000"
+                            android:paddingTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
                             android:shadowDy="1"
                             android:shadowRadius="10"
-                            android:text="KD"
+                            android:text="$KILLS"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textSize="24dp"
+                            android:layout_alignParentRight="true"
+                            android:translationX="-29dp"
+                            android:translationY="35dp" />
 
                         <TextView
-                            android:id="@+id/box_weekly_killsPerGame"
-                            android:layout_width="380dp"
-                            android:layout_height="100dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/box_grey"
+                            android:id="@+id/weeklyKD_text"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:shadowColor="#000000"
+                            android:paddingTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
                             android:shadowDy="1"
                             android:shadowRadius="10"
-                            android:text="KILLS / GAME"
+                            android:text="$KD"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textSize="24dp"
+                            android:layout_alignParentLeft="true"
+                            android:translationX="28dp"
+                            android:translationY="35dp" />
 
                         <TextView
-                            android:id="@+id/box_weekly_kills"
-                            android:layout_width="380dp"
-                            android:layout_height="100sp"
-                            android:layout_weight="1"
-                            android:background="@drawable/box_grey"
+                            android:id="@+id/weeklyKPG_text"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:shadowColor="#000000"
+                            android:paddingTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
                             android:shadowDy="1"
                             android:shadowRadius="10"
-                            android:text="KILLS"
+                            android:text="$KPG"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textSize="24dp"
+                            android:layout_centerInParent="true"
+                            android:translationY="7.5dp" />
 
-                    </LinearLayout>
+                    </RelativeLayout>
+
 
                     <TextView
                         android:id="@+id/weeklyStatsText3"
