@@ -1,5 +1,6 @@
 package com.louie.warzonestats.ui.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import com.louie.warzonestats.services.PlayerService
 class HomeFragment : Fragment() {
     lateinit var userEntry : TextInputEditText
 
+    @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,10 +24,22 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val inflatedLayout = inflater.inflate(R.layout.fragment_home, container, false)
         val searchButton = inflatedLayout.findViewById<Button>(R.id.searchButton)
+        val xblButton = inflatedLayout.findViewById<Button>(R.id.xblButton)
         userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
-        // todo: implement selection of button according to platform 'psn', 'battle', 'xbl'
+//        var platform = ""
+
+//        // todo: implement selection of button according to platform 'psn', 'battle', 'xbl'
+//        xblButton.setOnClickListener {
+//
+//            val platform = "xbl"
+////            xblButton.background = ContextCompat.getDrawable(this@getActivity()z, R.drawable.box_diamond)
+//            xblButton.borderColor
+//        }
+
         searchButton.setOnClickListener {
             val username = userEntry.text.toString().replace("#", "%23")
+//            val platform = "psn"
+//            val platform = "battle"
             val platform = "xbl"
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
             if(playerModel == null){

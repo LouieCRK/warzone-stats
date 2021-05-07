@@ -13,12 +13,13 @@
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="true"
         android:background="@color/grey_1"
-        app:elevation="10dp"
+        android:clickable="true"
+        android:elevation="20dp"
+        app:elevation="20dp"
         app:itemHorizontalTranslationEnabled="true"
-        app:itemIconSize="36dp"
+        app:itemIconSize="42dp"
         app:itemIconTint="@color/white"
         app:itemRippleColor="@color/red"
-        app:itemTextColor="@color/red"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/nav_menu">
 

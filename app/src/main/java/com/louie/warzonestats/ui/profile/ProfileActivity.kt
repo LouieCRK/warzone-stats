@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.louie.warzonestats.R
 import com.louie.warzonestats.models.player.PlayerModel
 import com.louie.warzonestats.services.PlayerService
@@ -39,7 +40,7 @@ class ProfileActivity : AppCompatActivity() {
         var lifetime_KD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
         var lifetime_Wins = lifetimeStatsBR.wins
         var lifetime_Kills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
-        var lifetime_WinRate = String.format("%.2f", lifetimeStatsBR.gamesPlayed.toDouble() / lifetimeStatsBR.wins.toDouble())
+        var lifetime_WinRate = String.format("%.2f", lifetimeStatsBR.wins.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble() * 100)
         var lifetime_KillsPerGame = String.format("%.2f", lifetimeStatsBR.kills.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble())
 
         // weekly player stats - assign data to variables
@@ -59,13 +60,19 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         // todo - continue setting logic for all lifetime stats
-        // logic to set lifetime KD to corresponding league
+        // logic to set lifetime KD and containers to corresponding leagues
         if (lifetime_KD >= 3.57) {
             kd_league = "legend"
+            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
+            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
         } else if (lifetime_KD < 3.57 && lifetime_KD > 2.08) {
             kd_league = "master"
+            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
+            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
         } else if (lifetime_KD < 2.08 && lifetime_KD > 1.14) {
             kd_league = "diamond"
+            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
+            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
         }
 
         // set player username to textView within Profile Activity
@@ -80,10 +87,6 @@ class ProfileActivity : AppCompatActivity() {
                 // set player lifetime KD to textView
                 var viewLeagueKD = findViewById<View>(R.id.league_kd_text) as TextView
                 viewLeagueKD.text = kd_league.capitalize()
-                // todo - work out how to dynamically change box colours in relation to league
-//                // set background plate as drawable league gradient
-//                var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-//                viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
             // WINS
                 // set player lifetime wins to textView
                 var viewLifetimeWins = findViewById<View>(R.id.lifetime_wins_text) as TextView
