@@ -166,17 +166,27 @@ class ProfileActivity : AppCompatActivity() {
 
         if (lifetime_KD >= 3.57) {
             leagueKD = "legend"
-            viewLeagueBoxKD.background =
-                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
         } else if (lifetime_KD < 3.57 && lifetime_KD > 2.08) {
             leagueKD = "master"
-            viewLeagueBoxKD.background =
-                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
         } else if (lifetime_KD < 2.08 && lifetime_KD > 1.14) {
+            leagueKD = "emerald"
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_emerald)
+        } else if (lifetime_KD < 1.14 && lifetime_KD > 0.92){
             leagueKD = "diamond"
-            viewLeagueBoxKD.background =
-                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
-        } else if (lifetime_KD < )
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
+        } else if (lifetime_KD < 1.14 && lifetime_KD > 0.92){
+            leagueKD = "gold"
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_gold)
+        } else if (lifetime_KD < 0.92 && lifetime_KD > 0.74){
+            leagueKD = "silver"
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_silver)
+        } else if (lifetime_KD < 0.74){
+            leagueKD = "bronze"
+            viewLeagueBoxKD.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_bronze)
+        }
+
         return leagueKD
     }
 
