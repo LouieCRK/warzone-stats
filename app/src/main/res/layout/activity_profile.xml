@@ -2297,7 +2297,7 @@
                                 android:id="@+id/leagueMatch_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/box_diamond"
+                                android:background="@drawable/box_silver"
                                 android:fontFamily="@font/news_cycle_bold"
                                 android:paddingTop="52dp"
                                 android:shadowColor="#505050"
