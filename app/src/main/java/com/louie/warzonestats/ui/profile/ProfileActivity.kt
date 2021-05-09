@@ -42,7 +42,6 @@ class ProfileActivity : AppCompatActivity() {
         // lifetime player stats - assign data to variables
         val lifetimeKD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
         val lifetimeWins = lifetimeStatsBR.wins
-        val lifetimeKills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
         val lifetimeWinRate = String.format("%.2f", lifetimeStatsBR.wins.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble() * 100)
         val lifetimeKPG = String.format("%.2f", lifetimeStatsBR.kills.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble())
 
@@ -56,10 +55,12 @@ class ProfileActivity : AppCompatActivity() {
         val viewUsername = findViewById<View>(R.id.username_text) as TextView
         viewUsername.text = playerModel!!.data.uno.toUpperCase(Locale.ROOT)
 
-        // call LeagueKD() function to get corresponding league name & drawable
-        val leagueKD = leagueWins(lifetimeKD, "")
-        // call LeagueWins() function to get corresponding league name & drawable
+        // call LeagueKD() function to get corresponding league position & drawable
+        val leagueKD = leagueKD(lifetimeKD, "")
+        // call LeagueWins() function to get corresponding league position & drawable
         val leagueWins = leagueWins(lifetimeWins, "")
+        // call leagueKills() function to get corresponding league position & drawable
+        val leagueKills = leagueKills(lifetimeStatsBR.kills, "")
 
         // LIFETIME STATS
             // KD
@@ -79,7 +80,11 @@ class ProfileActivity : AppCompatActivity() {
             // KILLS
                 // set player lifetime kills to textView
                 val viewLifetimeKills = findViewById<View>(R.id.lifetime_kills_text) as TextView
+                val lifetimeKills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
                 viewLifetimeKills.text = lifetimeKills.toString()
+                // set player lifetime kills league to textView
+                val viewLeagueKills = findViewById<View>(R.id.league_kills_text) as TextView
+                viewLeagueKills.text = leagueKills.capitalize(Locale.ROOT)
             // WIN %
                 // set player lifetime win percentage to textView
                 val viewLifetimeWinRate = findViewById<View>(R.id.lifetime_winrate_text) as TextView
@@ -164,7 +169,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     // logic to set lifetime KD and containers to corresponding leagues
-    private fun leagueWins(lifetimeKD: Double, emptyLeague: String): String {
+    private fun leagueKD(lifetimeKD: Double, emptyLeague: String): String {
         val viewLeagueBoxKD = findViewById<View>(R.id.box_kd) as TextView
         var leagueKD = emptyLeague
 
@@ -222,5 +227,36 @@ class ProfileActivity : AppCompatActivity() {
         }
         return leagueWins
     }
-    // todo - continue setting logic for all lifetime stats
+
+    // logic to set lifetime kills and containers to corresponding leagues
+    private fun leagueKills(lifetimeKills: Int, emptyLeague: String): String {
+        val viewLeagueBoxKills = findViewById<View>(R.id.box_kills) as TextView
+        var leagueKills = emptyLeague
+
+        if (lifetimeKills >= 12875) {
+            leagueKills = "legend"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_legend)
+        } else if (lifetimeKills in 7616..12874) {
+            leagueKills = "master"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_master)
+        } else if (lifetimeKills in 2075..7615) {
+            leagueKills = "emerald"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
+        } else if (lifetimeKills in 1024..2074){
+            leagueKills = "diamond"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
+        } else if (lifetimeKills in 450..1023){
+            leagueKills = "gold"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
+        } else if (lifetimeKills in 120..449){
+            leagueKills = "silver"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
+        } else if (lifetimeKills < 120){
+            leagueKills = "bronze"
+            viewLeagueBoxKills.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
+        }
+        return leagueKills
+    }
+    // todo - win % league
+    // todo - kills / game league
 }
