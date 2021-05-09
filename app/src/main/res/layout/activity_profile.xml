@@ -593,7 +593,7 @@
                             android:paddingLeft="5dp"
                             android:paddingTop="3dp"
                             android:paddingRight="5dp"
-                            android:shadowColor="@color/grey_0"
+                            android:shadowColor="@color/grey_3"
                             android:shadowDx="1"
                             android:shadowDy="1"
                             android:shadowRadius="10"
@@ -744,7 +744,7 @@
                         android:translationY="-5dp" />
 
                     <TextView
-                        android:id="@+id/text_20matches"
+                        android:id="@+id/text_10matches"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -754,31 +754,16 @@
                         android:shadowColor="#000000"
                         android:shadowDx="100"
                         android:shadowDy="100"
-                        android:text="LAST 20 MATCHES"
+                        android:text="LAST 10 MATCHES"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
-                    <RelativeLayout
-                        android:layout_width="375dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_weight="2"
-                        android:visibility="gone">>
-
-                        <TextView
-                            android:id="@+id/matchBox_1"
-                            android:layout_width="410dp"
-                            android:layout_height="120dp"
-                            android:background="@drawable/box_grey"
-                            android:text="TextView" />
-
-                    </RelativeLayout>
-
+// LAST 20 MATCHES ------------------------------------------------------------------------------------------------------------
+// MATCH 1 --------------------------------------------------------------------------------------------------------------------
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_1"
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
                         android:layout_marginLeft="15dp"
@@ -786,37 +771,1550 @@
                         android:layout_marginRight="15dp"
                         app:cardBackgroundColor="@color/grey_0"
                         app:cardCornerRadius="12dp"
-                        app:contentPadding="15dp">
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="125dp"
-                            android:layout_height="85dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/kills_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/br_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_1"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/CardView_MatchLeague"
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center|right"
-                            android:layout_marginRight="10dp"
                             app:cardBackgroundColor="#00FFFFFF">
 
                             <TextView
-                                android:id="@+id/matchLeague_1"
+                                android:id="@+id/leagueMatch_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/box_diamond"
                                 android:fontFamily="@font/news_cycle_bold"
-                                android:paddingTop="40dp"
-                                android:shadowColor="#000000"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
                                 android:shadowDx="1"
                                 android:shadowDy="1"
-                                android:shadowRadius="20"
+                                android:shadowRadius="10"
                                 android:text="$LEAGUE"
                                 android:textAlignment="center"
                                 android:textAllCaps="true"
                                 android:textColor="#FFFFFF"
-                                android:textSize="20dp" />
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:id="@+id/difficultyText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 2 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_2"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_master"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:fontFamily="@font/news_cycle_bold"
-                                android:paddingTop="10dp"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 3 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_3"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_bronze"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 4 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_4"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_silver"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+ // MATCH 5 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_5"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_gold"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 6 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_6"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_legend"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 7 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_7"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_bronze"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 8 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_8"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_master"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 9 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_9"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_diamond"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
+                                android:shadowColor="#000000"
+                                android:text="DIFFICULTY"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grey_3"
+                                android:textSize="16dp" />
+
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+// MATCH 10 --------------------------------------------------------------------------------------------------------------------
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/matchView_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="@color/grey_0"
+                        app:cardCornerRadius="12dp"
+                        app:contentPaddingBottom="15dp"
+                        app:contentPaddingLeft="15dp"
+                        app:contentPaddingRight="15dp"
+                        app:contentPaddingTop="15dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="50dp"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="KILLS"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/killsMatch_10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$KILLS"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            app:cardBackgroundColor="@color/grey_0"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="BATTLE ROYALE"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:id="@+id/modeMatch_10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="-3dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$GAMEMODE"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/dateMatch_10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|top|left"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:text="$DATETIME"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/positionMatch_10"
+                                    android:layout_width="92dp"
+                                    android:layout_height="45dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="@drawable/box_plate"
+                                    android:fontFamily="@font/news_cycle_bold"
+                                    android:paddingTop="10dp"
+                                    android:shadowColor="@color/grey_0"
+                                    android:text="$POS"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="140dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|right"
+                            app:cardBackgroundColor="#00FFFFFF">
+
+                            <TextView
+                                android:id="@+id/leagueMatch_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/box_diamond"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="52dp"
+                                android:shadowColor="#505050"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="10"
+                                android:text="$LEAGUE"
+                                android:textAlignment="center"
+                                android:textAllCaps="true"
+                                android:textColor="#FFFFFF"
+                                android:textSize="21dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/news_cycle_bold"
+                                android:paddingTop="15dp"
                                 android:shadowColor="#000000"
                                 android:text="DIFFICULTY"
                                 android:textAlignment="center"
