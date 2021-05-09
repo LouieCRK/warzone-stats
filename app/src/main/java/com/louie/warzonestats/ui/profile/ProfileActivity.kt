@@ -95,7 +95,6 @@ class ProfileActivity : AppCompatActivity() {
                 viewLifetimeKPG.text = lifetimeKPG
 
         // WEEKLY STATS
-        // todo - add logic that compares weekly stats to lifetime (red box colour = worse performance, green box colour = better performance)
             // MATCHES PLAYED
                 // set player weekly matches played to textView
                 val viewWeeklyMatches = findViewById<View>(R.id.weeklyMatches_text) as TextView
@@ -259,4 +258,6 @@ class ProfileActivity : AppCompatActivity() {
     }
     // todo - win % league
     // todo - kills / game league
+
+    // todo - add logic that compares weekly stats to lifetime (red box colour = worse performance, green box colour = better performance)
 }
