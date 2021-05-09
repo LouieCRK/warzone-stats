@@ -9,7 +9,7 @@ data class MatchItem(
     val matchStatData: MatchStatData,
     val matchTeamStat: MatchTeamStat,
     val mode: String,
-    val position: Int,
+    var position: Int,
     val refreshAt: Int,
     val startedAt: Int,
     val uno: String,

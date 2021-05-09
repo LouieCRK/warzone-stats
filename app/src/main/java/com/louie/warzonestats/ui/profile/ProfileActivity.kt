@@ -39,17 +39,37 @@ class ProfileActivity : AppCompatActivity() {
         var username = ""
         var kd_league = ""
 
-        var matchIndex = 0
-        for (i in playerMatches){
-            matchIndex = matchIndex + 1
-            println(i)
+        // iterate over matches within playerMatches
+        // create a matchIndex variable
+        // assign temporary variables to each matches stats e.g. kills, position
+        // assign variable to corresponding text view by using our matchIndex variable
+        // each text view has an incrementing id e.g. killsMatch_'x'
 
-            // breaks loop when the 10th match is loaded (we only want 10 most recent matches
-            if (matchIndex > 9){
+        var matchIndex = 0
+        for (match in playerMatches){
+            matchIndex ++
+
+            // error with api, when player queues for a 'plunder match' the position is set to 0
+            if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
+                match.position = 1
+            }
+
+            // assign text view identifier + our match index to variable
+            val kills = resources.getIdentifier("killsMatch_"+matchIndex, "id", packageName)
+            val viewMatchKills = findViewById<View>(kills) as TextView
+            val position = resources.getIdentifier("positionMatch_"+matchIndex, "id", packageName)
+            val viewMatchPosition = findViewById<View>(position) as TextView
+
+            // assign stat to views text
+            viewMatchKills.text = match.kills.toString()
+            viewMatchPosition.text = match.position.toString()
+
+            // breaks loop when the 10th match is loaded (10 most recent matches)
+            if (matchIndex >= 10){
                 break
             }
         }
-//        println(playerMatches[])
+
 
         // format stats ready for view
         // lifetime player stats - assign data to variables
