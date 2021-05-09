@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import com.louie.warzonestats.MainActivity
 import com.louie.warzonestats.R
+import com.louie.warzonestats.networking.services.MatchNetworkService
 import com.louie.warzonestats.networking.services.PlayerNetworkService
+import com.louie.warzonestats.services.MatchService
 import com.louie.warzonestats.services.PlayerService
 
 
@@ -29,6 +31,7 @@ class HomeFragment : Fragment() {
         val battleButton = inflatedLayout.findViewById<Button>(R.id.battleButton)
         // username = user input text
         userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
+        var username = ""
         var platform = ""
 
         // todo - error messages with toast
@@ -56,15 +59,18 @@ class HomeFragment : Fragment() {
             psnButton.setBackgroundColor(resources.getColor(R.color.grey_2))
         }
 
+        // search button on click listener
         searchButton.setOnClickListener {
             val username = userEntry.text.toString().replace("#", "%23")
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
+            val matchModel = MatchNetworkService.getMatchData(username, platform)
 
-            if(playerModel == null){
+            if(playerModel == null || matchModel == null){
                 // todo - add error message & further logic..
                 print("something went wrong")
             } else {
                 PlayerService.currentPlayerModel = playerModel
+                MatchService.currentMatchModel = matchModel
                 var mainActivity = this.requireActivity() as MainActivity
                 mainActivity.navigateToPlayerProfile()
             }

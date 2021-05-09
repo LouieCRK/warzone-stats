@@ -9,7 +9,9 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.louie.warzonestats.R
+import com.louie.warzonestats.models.match.MatchModel
 import com.louie.warzonestats.models.player.PlayerModel
+import com.louie.warzonestats.services.MatchService
 import com.louie.warzonestats.services.PlayerService
 import java.util.*
 
@@ -17,6 +19,7 @@ import java.util.*
 class ProfileActivity : AppCompatActivity() {
 
     var playerModel : PlayerModel? = null
+    var matchModel : MatchModel? = null
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,18 +28,30 @@ class ProfileActivity : AppCompatActivity() {
 
         // removes generic title bar
         this.supportActionBar?.hide()
-        // assign variable to currentPlayerModel
+        // assign variable to models
         playerModel = PlayerService.currentPlayerModel
+        matchModel = MatchService.currentMatchModel
 
         // assign variables to required model directories
         var lifetimeStatsBR = playerModel!!.data.lifetime.mode.br.properties
         var weeklyStatsBR = playerModel!!.data.weekly.mode.br_all.properties
-        var user_battle = playerModel!!.battleNetId
-        var user_xbl = playerModel!!.xblId
-        var user_psn = playerModel!!.psnId
+        var playerMatches = matchModel!!
         var username = ""
         var kd_league = ""
 
+        var matchIndex = 0
+        for (i in playerMatches){
+            matchIndex = matchIndex + 1
+            println(i)
+
+            // breaks loop when the 10th match is loaded (we only want 10 most recent matches
+            if (matchIndex > 9){
+                break
+            }
+        }
+//        println(playerMatches[])
+
+        // format stats ready for view
         // lifetime player stats - assign data to variables
         var lifetime_KD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
         var lifetime_Wins = lifetimeStatsBR.wins
@@ -103,16 +118,16 @@ class ProfileActivity : AppCompatActivity() {
                 var viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
                 viewWeeklyKills.text = weekly_Kills.toString()
 
-/*
-// todo - add to favourites button onclick
-var faveButton = findViewById<Button>(R.id.faveButton)
-// todo - work out how to reference fragment button from activity
-var playerButton_0 = findViewById<Button>(R.id.playerButton_0) as Button
 
-faveButton.setOnClickListener {
-playerButton_0.text = username
-}
-*/
+//            // todo - add to favourites button onclick
+//            var faveButton = findViewById<Button>(R.id.faveButton)
+//            // todo - work out how to reference fragment button from activity
+//            var playerButton_0 = findViewById<Button>(R.id.playerButton_0) as Button
+//
+//            faveButton.setOnClickListener {
+//            playerButton_0.text = username
+//            }
+
 
     }
 
