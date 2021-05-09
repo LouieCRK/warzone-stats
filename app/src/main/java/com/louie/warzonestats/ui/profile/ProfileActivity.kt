@@ -37,33 +37,6 @@ class ProfileActivity : AppCompatActivity() {
         val weeklyStatsBR = playerModel!!.data.weekly.mode.br_all.properties
         val playerMatches = matchModel!!
 
-        // create a matchIndex variable
-        var matchIndex = 0
-        // iterate over matches within playerMatches
-        for (match in playerMatches){
-            matchIndex ++
-
-            // error with api, when player queues for a 'plunder match' the position is set to 0
-            if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
-                match.position = 1
-            }
-
-            // assign text view identifier + our match index to variable
-            val kills = resources.getIdentifier("killsMatch_$matchIndex", "id", packageName)
-            val viewMatchKills = findViewById<View>(kills) as TextView
-            val position = resources.getIdentifier("positionMatch_$matchIndex", "id", packageName)
-            val viewMatchPosition = findViewById<View>(position) as TextView
-
-            // assign stat to views text
-            viewMatchKills.text = match.kills.toString()
-            viewMatchPosition.text = match.position.toString()
-
-            // breaks loop when the 10th match is loaded (10 most recent matches)
-            if (matchIndex >= 10){
-                break
-            }
-        }
-
         // format stats ready for view
         // lifetime player stats - assign data to variables
         val lifetimeKD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
@@ -93,7 +66,7 @@ class ProfileActivity : AppCompatActivity() {
                 // set player lifetime KD to textView
                 val viewLeagueKD = findViewById<View>(R.id.league_kd_text) as TextView
                 viewLeagueKD.text = leagueKD.capitalize(Locale.ROOT)
-        // WINS
+            // WINS
                 // set player lifetime wins to textView
                 val viewLifetimeWins = findViewById<View>(R.id.lifetime_wins_text) as TextView
                 viewLifetimeWins.text = lifetimeWins.toString()
@@ -129,6 +102,52 @@ class ProfileActivity : AppCompatActivity() {
                 val viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
                 viewWeeklyKills.text = weeklyKills.toString()
 
+        // LAST 10 GAMES
+            // create a matchIndex variable
+            var matchIndex = 0
+            // iterate over matches within playerMatches
+            for (match in playerMatches){
+                var plunderMatchCheck = false
+                var plunderMatch = ""
+                matchIndex ++
+
+                //
+                if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
+                    plunderMatch = match.mode.replace("_", " ").toUpperCase(Locale.ROOT)
+                    plunderMatchCheck = true
+                }
+
+                // assign text view identifier + our match index to variable
+                // kills
+                val kills = resources.getIdentifier("killsMatch_$matchIndex", "id", packageName)
+                val viewMatchKills = findViewById<View>(kills) as TextView
+                // position
+                val position = resources.getIdentifier("positionMatch_$matchIndex", "id", packageName)
+                val viewMatchPosition = findViewById<View>(position) as TextView
+                // game mode
+                val gameMode = resources.getIdentifier("modeMatch_$matchIndex", "id", packageName)
+                val viewGameMode = findViewById<View>(gameMode) as TextView
+                // league todo - $LEAGUE
+
+                // assign stat to views text
+                viewMatchKills.text = match.kills.toString()
+                viewMatchPosition.text = match.position.toString()
+                if (plunderMatchCheck){
+                    viewGameMode.text = plunderMatch
+                    // error with api, when player queues for a 'plunder match' the position is auto set to 0
+                    viewMatchPosition.text = "N/A"
+                }else{
+                    viewGameMode.text = match.mode.replace("br_br", "br ").toUpperCase(Locale.ROOT)
+                    viewMatchPosition.text = match.position.toString()
+                }
+
+                // breaks loop when the 10th match is loaded (10 most recent matches)
+                if (matchIndex >= 10){
+                    break
+                }
+
+            }
+
 //            var faveButton = findViewById<Button>(R.id.faveButton)
 //            // todo - work out how to reference FaveFragment button from ProfileActivity
 //            var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
@@ -157,7 +176,7 @@ class ProfileActivity : AppCompatActivity() {
             leagueKD = "diamond"
             viewLeagueBoxKD.background =
                 ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
-        }
+        } else if (lifetime_KD < )
         return leagueKD
     }
 

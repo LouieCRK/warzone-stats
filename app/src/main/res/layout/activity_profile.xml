@@ -662,7 +662,6 @@
                             android:id="@+id/gamesBox_silver"
                             android:layout_width="20px"
                             android:layout_height="150dp"
-                            android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/chart_silver"
@@ -800,7 +799,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_1"
@@ -810,8 +809,9 @@
                                     android:layout_marginBottom="-3dp"
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
+                                    android:textAlignment="center"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -869,13 +869,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -959,7 +959,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_2"
@@ -970,7 +970,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1027,13 +1027,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1115,7 +1115,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_3"
@@ -1126,7 +1126,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1183,13 +1183,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1271,7 +1271,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_4"
@@ -1282,7 +1282,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1339,13 +1339,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1427,7 +1427,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_5"
@@ -1438,7 +1438,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1495,13 +1495,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1583,7 +1583,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_6"
@@ -1594,7 +1594,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1651,13 +1651,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1739,7 +1739,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_7"
@@ -1750,7 +1750,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1807,13 +1807,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -1895,7 +1895,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_8"
@@ -1906,7 +1906,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -1963,13 +1963,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -2051,7 +2051,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_9"
@@ -2062,7 +2062,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -2119,13 +2119,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
@@ -2207,7 +2207,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="KILLS"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="14dp" />
+                                    android:textSize="19dp" />
 
                                 <TextView
                                     android:id="@+id/killsMatch_10"
@@ -2218,7 +2218,7 @@
                                     android:fontFamily="@font/news_cycle_bold"
                                     android:text="$KILLS"
                                     android:textColor="@color/red"
-                                    android:textSize="12sp" />
+                                    android:textSize="19dp" />
 
                             </LinearLayout>
 
@@ -2275,13 +2275,13 @@
                                     android:layout_alignParentLeft="true"
                                     android:background="@drawable/box_plate"
                                     android:fontFamily="@font/news_cycle_bold"
-                                    android:paddingTop="10dp"
+                                    android:paddingTop="3dp"
                                     android:shadowColor="@color/grey_0"
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
                                     android:textColor="@color/material_on_surface_emphasis_medium"
-                                    android:textSize="14sp" />
+                                    android:textSize="22dp" />
 
                             </LinearLayout>
 
