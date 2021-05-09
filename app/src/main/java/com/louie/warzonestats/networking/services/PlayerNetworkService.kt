@@ -29,7 +29,7 @@ object PlayerNetworkService {
             }
 
             override fun onFailure(call: Call?, e: IOException?) {
-                println("Failed API Request")
+                println("\n\n\n Failed API Request \n\n\n")
                 countDownLatch.countDown()
             }
         })

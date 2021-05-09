@@ -103,14 +103,16 @@ class ProfileActivity : AppCompatActivity() {
                 var viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
                 viewWeeklyKills.text = weekly_Kills.toString()
 
-//        // todo - add to favourites button onclick
-//        var faveButton = findViewById<Button>(R.id.faveButton)
-//        // todo - work out how to reference fragment button from activity
-//        var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
-//
-//        faveButton.setOnClickListener {
-//            playerButton_0.text = username
-//        }
+/*
+// todo - add to favourites button onclick
+var faveButton = findViewById<Button>(R.id.faveButton)
+// todo - work out how to reference fragment button from activity
+var playerButton_0 = findViewById<Button>(R.id.playerButton_0) as Button
+
+faveButton.setOnClickListener {
+playerButton_0.text = username
+}
+*/
 
     }
 

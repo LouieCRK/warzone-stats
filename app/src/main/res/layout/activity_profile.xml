@@ -107,7 +107,6 @@
                             android:elevation="@dimen/cardview_compat_inset_shadow"
                             android:fontFamily="@font/news_cycle_bold"
                             android:minHeight="55dp"
-                            android:onClick=" "
                             android:text="ADD TO FAVOURITES"
                             android:textSize="13dp"
                             app:cornerRadius="25px"

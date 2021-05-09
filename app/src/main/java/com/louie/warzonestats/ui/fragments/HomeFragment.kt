@@ -61,6 +61,7 @@ class HomeFragment : Fragment() {
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
 
             if(playerModel == null){
+                // todo - add error message & further logic..
                 print("something went wrong")
             } else {
                 PlayerService.currentPlayerModel = playerModel
