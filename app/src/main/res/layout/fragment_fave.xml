@@ -67,6 +67,136 @@
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="#FFFFFF"
                     android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@color/grey_3"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/playerButton_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                    <Button
+                        android:id="@+id/playerButton_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:enabled="true"
+                        android:focusable="auto"
+                        android:fontFamily="@font/news_cycle_bold"
+                        android:minHeight="55dp"
+                        android:textSize="15dp"
+                        app:cornerRadius="25px"
+                        app:icon="@drawable/ic_fave_red"
+                        app:iconPadding="5dp"
+                        app:iconSize="25dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="5px" />
+
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 

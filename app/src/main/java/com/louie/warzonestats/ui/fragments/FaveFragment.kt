@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.louie.warzonestats.R
 
@@ -15,7 +16,13 @@ class FaveFragment : Fragment() {
     ): View? {
         // inflate the layout for this fragment
         val inflatedLayout = inflater.inflate(R.layout.fragment_fave, container, false)
+        // assign variable to buttons
+        var  playerButton_0 = inflatedLayout.findViewById<Button>(R.id.playerButton_0)
 
+
+        playerButton_0.setOnClickListener {
+            playerButton_0.text = "USERNAME"
+        }
 
         return inflatedLayout
     }

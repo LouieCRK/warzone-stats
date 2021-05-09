@@ -59,8 +59,8 @@ class HomeFragment : Fragment() {
         searchButton.setOnClickListener {
             val username = userEntry.text.toString().replace("#", "%23")
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
-            if(playerModel == null){
 
+            if(playerModel == null){
                 print("something went wrong")
             } else {
                 PlayerService.currentPlayerModel = playerModel

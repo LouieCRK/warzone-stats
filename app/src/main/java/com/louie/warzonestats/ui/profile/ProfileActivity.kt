@@ -4,9 +4,7 @@ import android.icu.text.NumberFormat
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -24,6 +22,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
         // removes generic title bar
         this.supportActionBar?.hide()
         // assign variable to currentPlayerModel
@@ -51,31 +50,9 @@ class ProfileActivity : AppCompatActivity() {
         var weekly_Kills = weeklyStatsBR.kills
         var weekly_Matches = weeklyStatsBR.matchesPlayed
 
-        // todo - can probably change this logic once I have the platform buttons working
-        // logic to set username to correct value and not null
-        if (user_battle == null && user_psn == null) {
-            username = user_xbl as String
-        } else if (user_battle == null && user_xbl == null) {
-            username = user_psn as String
-        } else if (user_psn == null && user_xbl == null) {
-            username = user_battle as String
-        }
 
-        // todo - continue setting logic for all lifetime stats
-        // logic to set lifetime KD and containers to corresponding leagues
-        if (lifetime_KD >= 3.57) {
-            kd_league = "legend"
-            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
-        } else if (lifetime_KD < 3.57 && lifetime_KD > 2.08) {
-            kd_league = "master"
-            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
-        } else if (lifetime_KD < 2.08 && lifetime_KD > 1.14) {
-            kd_league = "diamond"
-            var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-            viewLeagueKD_box.background = ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
-        }
+        // call League_KD() function to get corresponding league name & drawable
+        kd_league = League_KD(lifetime_KD, kd_league)
 
         // set player username to textView within Profile Activity
         var viewUsername = findViewById<View>(R.id.username_text) as TextView
@@ -126,17 +103,37 @@ class ProfileActivity : AppCompatActivity() {
                 var viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
                 viewWeeklyKills.text = weekly_Kills.toString()
 
-        // todo - add to favourites button onclick
-        val view: View = layoutInflater.inflate(R.layout.activity_profile, null)
-        // assign variables
-        var faveButton = view.findViewById<Button>(R.id.faveButton)
-
-        faveButton.setOnClickListener {
-            Toast.makeText(this,"hello", Toast.LENGTH_SHORT).show()
-        }
-
+//        // todo - add to favourites button onclick
+//        var faveButton = findViewById<Button>(R.id.faveButton)
+//        // todo - work out how to reference fragment button from activity
+//        var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
+//
+//        faveButton.setOnClickListener {
+//            playerButton_0.text = username
+//        }
 
     }
-}
 
-//crook#21832
+    // todo - continue setting logic for all lifetime stats
+    // logic to set lifetime KD and containers to corresponding leagues
+    fun League_KD(lifetime_KD: Double, kd_league: String): String {
+        var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
+        var kd_league1 = kd_league
+
+        if (lifetime_KD >= 3.57) {
+            kd_league1 = "legend"
+            viewLeagueKD_box.background =
+                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
+        } else if (lifetime_KD < 3.57 && lifetime_KD > 2.08) {
+            kd_league1 = "master"
+            viewLeagueKD_box.background =
+                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
+        } else if (lifetime_KD < 2.08 && lifetime_KD > 1.14) {
+            kd_league1 = "diamond"
+            viewLeagueKD_box.background =
+                ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
+        }
+        return kd_league1
+    }
+
+}
