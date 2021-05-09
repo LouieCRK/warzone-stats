@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="psButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:elevation">@dimen/cardview_compat_inset_shadow</item>
+        <item name="android:enabled">true</item>
+        <item name="android:focusable">auto</item>
+        <item name="android:fontFamily">@font/news_cycle_bold</item>
+        <item name="android:insetRight">8dp</item>
+        <item name="android:minHeight">55dp</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+</resources>

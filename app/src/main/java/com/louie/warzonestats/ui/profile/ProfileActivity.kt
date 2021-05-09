@@ -4,7 +4,9 @@ import android.icu.text.NumberFormat
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -123,6 +125,15 @@ class ProfileActivity : AppCompatActivity() {
                 // set player weekly matches played to textView
                 var viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
                 viewWeeklyKills.text = weekly_Kills.toString()
+
+        // todo - add to favourites button onclick
+        val view: View = layoutInflater.inflate(R.layout.activity_profile, null)
+        // assign variables
+        var faveButton = view.findViewById<Button>(R.id.faveButton)
+
+        faveButton.setOnClickListener {
+            Toast.makeText(this,"hello", Toast.LENGTH_SHORT).show()
+        }
 
 
     }

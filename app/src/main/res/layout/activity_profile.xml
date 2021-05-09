@@ -107,6 +107,7 @@
                             android:elevation="@dimen/cardview_compat_inset_shadow"
                             android:fontFamily="@font/news_cycle_bold"
                             android:minHeight="55dp"
+                            android:onClick=" "
                             android:text="ADD TO FAVOURITES"
                             android:textSize="13dp"
                             app:cornerRadius="25px"
@@ -292,12 +293,13 @@
                             android:textSize="27dp"
                             android:translationX="229dp"
                             android:translationY="30dp" />
+
                         <TextView
                             android:id="@+id/league_kills_text"
                             android:layout_width="187dp"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingBottom="4dp"
                             android:shadowColor="#000000"
@@ -359,6 +361,7 @@
                                 android:textColor="#FFFFFF" />
 
                         </LinearLayout>
+
                         <TextView
                             android:id="@+id/lifetime_winrate_text"
                             android:layout_width="115dp"
@@ -400,6 +403,7 @@
                             android:id="@+id/lifetime_killsPerGame_text"
                             android:layout_width="115dp"
                             android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingLeft="5dp"
@@ -413,15 +417,15 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="27dp"
-                            android:layout_alignParentRight="true"
                             android:translationX="-37dp"
                             android:translationY="30dp" />
+
                         <TextView
                             android:id="@+id/league_killsPerGame_text"
                             android:layout_width="187dp"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
                             android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
                             android:fontFamily="@font/news_cycle_bold"
                             android:paddingBottom="4dp"
                             android:shadowColor="#000000"
@@ -540,10 +544,11 @@
                             android:id="@+id/weeklyKills_text"
                             android:layout_width="100dp"
                             android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:paddingTop="3dp"
                             android:paddingLeft="5dp"
+                            android:paddingTop="3dp"
                             android:paddingRight="5dp"
                             android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
@@ -554,7 +559,6 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="24dp"
-                            android:layout_alignParentRight="true"
                             android:translationX="-29dp"
                             android:translationY="35dp" />
 
@@ -562,10 +566,11 @@
                             android:id="@+id/weeklyKD_text"
                             android:layout_width="100dp"
                             android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:paddingTop="3dp"
                             android:paddingLeft="5dp"
+                            android:paddingTop="3dp"
                             android:paddingRight="5dp"
                             android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
@@ -576,7 +581,6 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="24dp"
-                            android:layout_alignParentLeft="true"
                             android:translationX="28dp"
                             android:translationY="35dp" />
 
@@ -584,10 +588,11 @@
                             android:id="@+id/weeklyKPG_text"
                             android:layout_width="100dp"
                             android:layout_height="50dp"
+                            android:layout_centerInParent="true"
                             android:background="@drawable/box_plate"
                             android:fontFamily="@font/news_cycle_bold"
-                            android:paddingTop="3dp"
                             android:paddingLeft="5dp"
+                            android:paddingTop="3dp"
                             android:paddingRight="5dp"
                             android:shadowColor="@color/grey_0"
                             android:shadowDx="1"
@@ -598,7 +603,6 @@
                             android:textAllCaps="true"
                             android:textColor="@color/material_on_surface_emphasis_medium"
                             android:textSize="24dp"
-                            android:layout_centerInParent="true"
                             android:translationY="7.5dp" />
 
                     </RelativeLayout>

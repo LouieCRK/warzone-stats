@@ -13,8 +13,11 @@ class FaveFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fave, container, false)
+        // inflate the layout for this fragment
+        val inflatedLayout = inflater.inflate(R.layout.fragment_fave, container, false)
+
+
+        return inflatedLayout
     }
 
 }
