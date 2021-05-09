@@ -15,37 +15,31 @@ import com.louie.warzonestats.services.MatchService
 import com.louie.warzonestats.services.PlayerService
 import java.util.*
 
-
+@Suppress("SameParameterValue")
 class ProfileActivity : AppCompatActivity() {
 
-    var playerModel : PlayerModel? = null
-    var matchModel : MatchModel? = null
+    private var playerModel : PlayerModel? = null
+    private var matchModel : MatchModel? = null
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
-
         // removes generic title bar
         this.supportActionBar?.hide()
+
         // assign variable to models
         playerModel = PlayerService.currentPlayerModel
         matchModel = MatchService.currentMatchModel
 
         // assign variables to required model directories
-        var lifetimeStatsBR = playerModel!!.data.lifetime.mode.br.properties
-        var weeklyStatsBR = playerModel!!.data.weekly.mode.br_all.properties
-        var playerMatches = matchModel!!
-        var username = ""
-        var kd_league = ""
+        val lifetimeStatsBR = playerModel!!.data.lifetime.mode.br.properties
+        val weeklyStatsBR = playerModel!!.data.weekly.mode.br_all.properties
+        val playerMatches = matchModel!!
 
-        // iterate over matches within playerMatches
         // create a matchIndex variable
-        // assign temporary variables to each matches stats e.g. kills, position
-        // assign variable to corresponding text view by using our matchIndex variable
-        // each text view has an incrementing id e.g. killsMatch_'x'
-
         var matchIndex = 0
+        // iterate over matches within playerMatches
         for (match in playerMatches){
             matchIndex ++
 
@@ -55,9 +49,9 @@ class ProfileActivity : AppCompatActivity() {
             }
 
             // assign text view identifier + our match index to variable
-            val kills = resources.getIdentifier("killsMatch_"+matchIndex, "id", packageName)
+            val kills = resources.getIdentifier("killsMatch_$matchIndex", "id", packageName)
             val viewMatchKills = findViewById<View>(kills) as TextView
-            val position = resources.getIdentifier("positionMatch_"+matchIndex, "id", packageName)
+            val position = resources.getIdentifier("positionMatch_$matchIndex", "id", packageName)
             val viewMatchPosition = findViewById<View>(position) as TextView
 
             // assign stat to views text
@@ -70,107 +64,101 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
 
-
         // format stats ready for view
         // lifetime player stats - assign data to variables
-        var lifetime_KD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
-        var lifetime_Wins = lifetimeStatsBR.wins
-        var lifetime_Kills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
-        var lifetime_WinRate = String.format("%.2f", lifetimeStatsBR.wins.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble() * 100)
-        var lifetime_KillsPerGame = String.format("%.2f", lifetimeStatsBR.kills.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble())
+        val lifetimeKD = String.format("%.2f", lifetimeStatsBR.kdRatio).toDouble()
+        val lifetimeWins = lifetimeStatsBR.wins
+        val lifetimeKills = NumberFormat.getNumberInstance(Locale.US).format(lifetimeStatsBR.kills)
+        val lifetimeWinRate = String.format("%.2f", lifetimeStatsBR.wins.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble() * 100)
+        val lifetimeKPG = String.format("%.2f", lifetimeStatsBR.kills.toDouble() / lifetimeStatsBR.gamesPlayed.toDouble())
 
         // weekly player stats - assign data to variables
-        var weekly_KD = String.format("%.2f", weeklyStatsBR.kdRatio).toDouble()
-        var weekly_KillsPerGame = String.format("%.2f", weeklyStatsBR.killsPerGame).toDouble()
-        var weekly_Kills = weeklyStatsBR.kills
-        var weekly_Matches = weeklyStatsBR.matchesPlayed
-
+        val weeklyKD = String.format("%.2f", weeklyStatsBR.kdRatio).toDouble()
+        val weeklyKPG = String.format("%.2f", weeklyStatsBR.killsPerGame).toDouble()
+        val weeklyKills = weeklyStatsBR.kills
+        val weeklyMatches = weeklyStatsBR.matchesPlayed
 
         // call League_KD() function to get corresponding league name & drawable
-        kd_league = League_KD(lifetime_KD, kd_league)
+        val leagueKD = leagueKD(lifetimeKD, "")
 
         // set player username to textView within Profile Activity
-        var viewUsername = findViewById<View>(R.id.username_text) as TextView
-        viewUsername.text = username.toUpperCase()
+        val viewUsername = findViewById<View>(R.id.username_text) as TextView
+        viewUsername.text = playerModel!!.data.uno.toUpperCase(Locale.ROOT)
 
         // LIFETIME STATS
             // KD
                 // set player lifetime KD to textView
-                var viewLifetimeKD = findViewById<View>(R.id.lifetime_kd_text) as TextView
-                viewLifetimeKD.text = lifetime_KD.toString()
+                val viewLifetimeKD = findViewById<View>(R.id.lifetime_kd_text) as TextView
+                viewLifetimeKD.text = lifetimeKD.toString()
                 // set player lifetime KD to textView
-                var viewLeagueKD = findViewById<View>(R.id.league_kd_text) as TextView
-                viewLeagueKD.text = kd_league.capitalize()
-            // WINS
+                val viewLeagueKD = findViewById<View>(R.id.league_kd_text) as TextView
+                viewLeagueKD.text = leagueKD.capitalize(Locale.ROOT)
+        // WINS
                 // set player lifetime wins to textView
-                var viewLifetimeWins = findViewById<View>(R.id.lifetime_wins_text) as TextView
-                viewLifetimeWins.text = lifetime_Wins.toString()
+                val viewLifetimeWins = findViewById<View>(R.id.lifetime_wins_text) as TextView
+                viewLifetimeWins.text = lifetimeWins.toString()
             // KILLS
                 // set player lifetime kills to textView
-                var viewLifetimeKills = findViewById<View>(R.id.lifetime_kills_text) as TextView
-                viewLifetimeKills.text = lifetime_Kills.toString()
+                val viewLifetimeKills = findViewById<View>(R.id.lifetime_kills_text) as TextView
+                viewLifetimeKills.text = lifetimeKills.toString()
             // WIN %
                 // set player lifetime win percentage to textView
-                var viewLifetimeWinrate = findViewById<View>(R.id.lifetime_winrate_text) as TextView
-                viewLifetimeWinrate.text = lifetime_WinRate.toString()
+                val viewLifetimeWinRate = findViewById<View>(R.id.lifetime_winrate_text) as TextView
+                viewLifetimeWinRate.text = lifetimeWinRate
             // KILLS PER GAME
                 // set player lifetime win percentage to textView
-                var viewLifetimeKPG = findViewById<View>(R.id.lifetime_killsPerGame_text) as TextView
-                viewLifetimeKPG.text = lifetime_KillsPerGame.toString()
+                val viewLifetimeKPG = findViewById<View>(R.id.lifetime_killsPerGame_text) as TextView
+                viewLifetimeKPG.text = lifetimeKPG
 
         // WEEKLY STATS
-        // todo - add logic that compares weekly stats to lifetime
-        // todo - red box colour = worse performance, green box colour = better performance
+        // todo - add logic that compares weekly stats to lifetime (red box colour = worse performance, green box colour = better performance)
             // MATCHES PLAYED
                 // set player weekly matches played to textView
-                var viewWeeklyMatches = findViewById<View>(R.id.weeklyMatches_text) as TextView
-                viewWeeklyMatches.text = ("$weekly_Matches MATCHES PLAYED")
+                val viewWeeklyMatches = findViewById<View>(R.id.weeklyMatches_text) as TextView
+                viewWeeklyMatches.text = ("$weeklyMatches MATCHES PLAYED")
             // KD
                 // set player weekly matches played to textView
-                var viewWeeklyKD = findViewById<View>(R.id.weeklyKD_text) as TextView
-                viewWeeklyKD.text = weekly_KD.toString()
+                val viewWeeklyKD = findViewById<View>(R.id.weeklyKD_text) as TextView
+                viewWeeklyKD.text = weeklyKD.toString()
             // KILLS PER GAME
                 // set player weekly matches played to textView
-                var viewWeeklyKPG = findViewById<View>(R.id.weeklyKPG_text) as TextView
-                viewWeeklyKPG.text = weekly_KillsPerGame.toString()
+                val viewWeeklyKPG = findViewById<View>(R.id.weeklyKPG_text) as TextView
+                viewWeeklyKPG.text = weeklyKPG.toString()
             // KILLS
                 // set player weekly matches played to textView
-                var viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
-                viewWeeklyKills.text = weekly_Kills.toString()
+                val viewWeeklyKills = findViewById<View>(R.id.weeklyKills_text) as TextView
+                viewWeeklyKills.text = weeklyKills.toString()
 
-
-//            // todo - add to favourites button onclick
 //            var faveButton = findViewById<Button>(R.id.faveButton)
-//            // todo - work out how to reference fragment button from activity
-//            var playerButton_0 = findViewById<Button>(R.id.playerButton_0) as Button
-//
+//            // todo - work out how to reference FaveFragment button from ProfileActivity
+//            var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
+//            // todo - add to favourites button onclick
 //            faveButton.setOnClickListener {
-//            playerButton_0.text = username
+//                playerButton_0.visibility = View.VISIBLE
+//                playerButton_0.text = playerMatches[1].username.toUpperCase()
 //            }
-
-
     }
 
     // todo - continue setting logic for all lifetime stats
     // logic to set lifetime KD and containers to corresponding leagues
-    fun League_KD(lifetime_KD: Double, kd_league: String): String {
-        var viewLeagueKD_box = findViewById<View>(R.id.box_kd) as TextView
-        var kd_league1 = kd_league
+    private fun leagueKD(lifetime_KD: Double, kd_league: String): String {
+        val viewLeagueBoxKD = findViewById<View>(R.id.box_kd) as TextView
+        var leagueKD = kd_league
 
         if (lifetime_KD >= 3.57) {
-            kd_league1 = "legend"
-            viewLeagueKD_box.background =
+            leagueKD = "legend"
+            viewLeagueBoxKD.background =
                 ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_legend)
         } else if (lifetime_KD < 3.57 && lifetime_KD > 2.08) {
-            kd_league1 = "master"
-            viewLeagueKD_box.background =
+            leagueKD = "master"
+            viewLeagueBoxKD.background =
                 ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_master)
         } else if (lifetime_KD < 2.08 && lifetime_KD > 1.14) {
-            kd_league1 = "diamond"
-            viewLeagueKD_box.background =
+            leagueKD = "diamond"
+            viewLeagueBoxKD.background =
                 ContextCompat.getDrawable(this@ProfileActivity, R.drawable.box_diamond)
         }
-        return kd_league1
+        return leagueKD
     }
 
 }

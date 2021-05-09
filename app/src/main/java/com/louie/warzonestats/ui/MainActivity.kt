@@ -1,9 +1,10 @@
-package com.louie.warzonestats
+package com.louie.warzonestats.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.louie.warzonestats.R
 import com.louie.warzonestats.ui.fragments.FaveFragment
 import com.louie.warzonestats.ui.fragments.HomeFragment
 import com.louie.warzonestats.ui.fragments.LeaderboardFragment

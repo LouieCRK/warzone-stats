@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
-import com.louie.warzonestats.MainActivity
 import com.louie.warzonestats.R
 import com.louie.warzonestats.networking.services.MatchNetworkService
 import com.louie.warzonestats.networking.services.PlayerNetworkService
 import com.louie.warzonestats.services.MatchService
 import com.louie.warzonestats.services.PlayerService
+import com.louie.warzonestats.ui.MainActivity
 
-
+@Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
     lateinit var userEntry : TextInputEditText
 
@@ -31,7 +31,6 @@ class HomeFragment : Fragment() {
         val battleButton = inflatedLayout.findViewById<Button>(R.id.battleButton)
         // username = user input text
         userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
-        var username = ""
         var platform = ""
 
         // todo - error messages with toast
