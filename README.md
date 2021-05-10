@@ -6,6 +6,7 @@ Warzone Stats ranks player statistics and places them within leagues, something 
 Leagues as follows:
 - Legend (Highest)
 - Master
+- Emerald
 - Diamond
 - Gold
 - Silver
