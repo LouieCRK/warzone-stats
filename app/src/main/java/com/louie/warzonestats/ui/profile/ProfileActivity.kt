@@ -211,11 +211,11 @@ class ProfileActivity : AppCompatActivity() {
         val bronzeBar = findViewById<View>(R.id.gamesBox_bronze) as TextView
 
         // assign layout heights to distribution bars depending on their value
-        emeraldBar.layoutParams.height  = leagueEmerald * 20
-        diamondBar.layoutParams.height = leagueDiamond * 20
-        goldBar.layoutParams.height = leagueGold * 20
-        silverBar.layoutParams.height = leagueSilver * 20
-        bronzeBar.layoutParams.height = leagueBronze * 20
+        emeraldBar.layoutParams.height  = ((leagueEmerald * 52.5).toInt())
+        diamondBar.layoutParams.height = ((leagueDiamond * 52.5).toInt())
+        goldBar.layoutParams.height = ((leagueGold * 52.5).toInt())
+        silverBar.layoutParams.height = ((leagueSilver * 52.5).toInt())
+        bronzeBar.layoutParams.height = ((leagueBronze * 52.5).toInt())
 
         // todo - work out how to reference player buttons from FaveFragment
 //        var faveButton: Button? = findViewById(R.id.faveButton)
