@@ -13,6 +13,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -49,5 +50,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:24.1.1'
 
 }
