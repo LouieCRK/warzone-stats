@@ -8,7 +8,6 @@ import com.louie.warzonestats.R
 import com.louie.warzonestats.ui.fragments.FaveFragment
 import com.louie.warzonestats.ui.fragments.HomeFragment
 import com.louie.warzonestats.ui.fragments.LeaderboardFragment
-import com.louie.warzonestats.ui.fragments.StreamerFragment
 import com.louie.warzonestats.ui.profile.ProfileActivity
 
 open class MainActivity: AppCompatActivity() {
@@ -23,7 +22,6 @@ open class MainActivity: AppCompatActivity() {
         // assign fragments to variables
         val homeFragment = HomeFragment()
         val leaderboardFragment = LeaderboardFragment()
-        val streamerFragment = StreamerFragment()
         val faveFragment = FaveFragment()
 
         // initiate with home fragment
@@ -36,7 +34,6 @@ open class MainActivity: AppCompatActivity() {
             when (it.itemId) {
                 R.id.ic_home -> makeCurrentFragment(homeFragment)
                 R.id.ic_leaderboard -> makeCurrentFragment(leaderboardFragment)
-                R.id.ic_streamer -> makeCurrentFragment(streamerFragment)
                 R.id.ic_fave -> makeCurrentFragment(faveFragment)
             }
             true
