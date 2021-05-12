@@ -118,14 +118,9 @@ class ProfileActivity : AppCompatActivity() {
             // iterate over matches within playerMatches
             for (match in playerMatches){
                 var plunderMatchCheck = false
+                var matchAvgKD = 0.0
                 var plunderMatch = ""
                 matchIndex ++
-
-                //
-                if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
-                    plunderMatch = match.mode.replace("_", " ").toUpperCase(Locale.ROOT)
-                    plunderMatchCheck = true
-                }
 
                 // assign text view identifier + our match index to variable
                 // kills
@@ -138,10 +133,21 @@ class ProfileActivity : AppCompatActivity() {
                 val gameMode = resources.getIdentifier("modeMatch_$matchIndex", "id", packageName)
                 val viewGameMode = findViewById<View>(gameMode) as TextView
                 // league todo - $LEAGUE
+                val lobbyKD = resources.getIdentifier("leagueMatch_$matchIndex", "id", packageName)
+                val viewMatchKD = findViewById<View>(lobbyKD) as TextView
 
-                // assign stat to views text
-                viewMatchKills.text = match.kills.toString()
-                viewMatchPosition.text = match.position.toString()
+                // issue with API - some match stat data comes back as null, to avoid error we will just assign an unknown league
+                if (match.matchStatData == null){
+                    matchAvgKD = 0.0
+                } else {
+                    matchAvgKD = String.format("%.2f", match.matchStatData.playerAverage + match.matchStatData.playerMedian / 2).toDouble()
+                }
+
+                if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
+                    plunderMatch = match.mode.replace("_", " ").toUpperCase(Locale.ROOT)
+                    plunderMatchCheck = true
+                }
+
                 if (plunderMatchCheck){
                     viewGameMode.text = plunderMatch
                     // error with api, when player queues for a 'plunder match' the position is auto set to 0
@@ -151,11 +157,40 @@ class ProfileActivity : AppCompatActivity() {
                     viewMatchPosition.text = match.position.toString()
                 }
 
+                // assign league name and league color from match average kd
+                if (matchAvgKD > 2){
+                    viewMatchKD.text = "Emerald"
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
+                };if (matchAvgKD > 1.7 && matchAvgKD < 2){
+                    viewMatchKD.text = "Diamond"
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
+                };if (matchAvgKD > 1.5 && matchAvgKD < 1.7){
+                    viewMatchKD.text = "Gold"
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
+                };if (matchAvgKD > 1 && matchAvgKD < 1.5){
+                    viewMatchKD.text = "Silver"
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
+                };if (matchAvgKD < 1){
+                    viewMatchKD.text = "Bronze"
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
+                }
+
+                // assign stat to views text
+                viewMatchKills.text = match.kills.toString()
+                viewMatchPosition.text = match.position.toString()
+
                 // breaks loop when the 10th match is loaded (10 most recent matches)
                 if (matchIndex >= 10){
                     break
                 }
+
+                // todo - add functionality for 'recent games - league distribution'
             }
+
+
+
+
+
 
 //            var faveButton = findViewById<Button>(R.id.faveButton)
 //            // todo - work out how to reference FaveFragment button from ProfileActivity

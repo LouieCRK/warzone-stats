@@ -1,10 +1,12 @@
 package com.louie.warzonestats.ui.fragments
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import com.louie.warzonestats.R
@@ -33,26 +35,21 @@ class HomeFragment : Fragment() {
         userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
         var platform = ""
 
-        // todo - error messages with toast
-//        var toast = Toast.makeText(context, "Test", Toast.LENGTH_SHORT)
-//        toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
-//        toast.show()
-
         // platform button listeners to change platform value and button appearance
         xblButton.setOnClickListener {
-            platform = "xbl"
+            "xbl".also { platform = it }
             xblButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             battleButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             psnButton.setBackgroundColor(resources.getColor(R.color.grey_2))
         }
         psnButton.setOnClickListener {
-            platform = "psn"
+            "psn".also { platform = it }
             psnButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             battleButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             xblButton.setBackgroundColor(resources.getColor(R.color.grey_2))
         }
         battleButton.setOnClickListener {
-            platform = "battle"
+            "battle".also { platform = it }
             battleButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             xblButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             psnButton.setBackgroundColor(resources.getColor(R.color.grey_2))
@@ -64,14 +61,24 @@ class HomeFragment : Fragment() {
             val playerModel = PlayerNetworkService.getPlayerData(username, platform)
             val matchModel = MatchNetworkService.getMatchData(username, platform)
 
-            if(playerModel == null || matchModel == null){
-                // todo - add error message & further logic..
-                print("something went wrong")
-            } else {
+            if (username == ""){
+                var toast = Toast.makeText(context, "Error: Please enter a Username", Toast.LENGTH_SHORT)
+                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                toast.show()
+            }
+            if (platform == ""){
+                var toast = Toast.makeText(context, "Error: Please select a Platform", Toast.LENGTH_SHORT)
+                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                toast.show()
+            } else if (playerModel != null && matchModel != null){
                 PlayerService.currentPlayerModel = playerModel
                 MatchService.currentMatchModel = matchModel
                 var mainActivity = this.requireActivity() as MainActivity
                 mainActivity.navigateToPlayerProfile()
+            } else if (playerModel == null && matchModel == null) {
+                var toast = Toast.makeText(context, "Error: User not Found", Toast.LENGTH_SHORT)
+                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                toast.show()
             }
         }
         return inflatedLayout

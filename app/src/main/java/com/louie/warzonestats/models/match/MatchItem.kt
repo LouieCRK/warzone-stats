@@ -6,7 +6,7 @@ data class MatchItem(
     val gulagWin: Boolean,
     val id: String,
     val kills: Int,
-    val matchStatData: MatchStatData,
+    var matchStatData: MatchStatData,
     val matchTeamStat: MatchTeamStat,
     val mode: String,
     var position: Int,
