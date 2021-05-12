@@ -4,14 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00B8D4"
+    android:isScrollContainer="true"
     tools:context=".ui.MainActivity">
-
-    <ScrollView
-        android:id="@+id/nav_wrapper"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/grey_3"
-        android:isScrollContainer="true" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -20,6 +15,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/grey_1"
         android:clickable="true"
+        android:isScrollContainer="true"
         app:itemIconSize="42dp"
         app:itemIconTint="@color/white"
         app:itemRippleColor="@color/red"
@@ -28,4 +24,11 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+    <ScrollView
+        android:id="@+id/nav_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_3"
+        android:fillViewport="true"
+        android:isScrollContainer="true" />
 </RelativeLayout>
