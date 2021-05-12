@@ -139,19 +139,19 @@ class ProfileActivity : AppCompatActivity() {
                 }
 
                 // assign league name and league color from match average kd
-                if (matchAvgKD > 2){
+                if (matchAvgKD >= 2){
                     viewMatchKD.text = "Emerald"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
                     leagueEmerald += 1
-                };if (matchAvgKD > 1.7 && matchAvgKD < 2){
+                };if (matchAvgKD >= 1.7 && matchAvgKD < 2){
                     viewMatchKD.text = "Diamond"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
                     leagueDiamond += 1
-                };if (matchAvgKD > 1.5 && matchAvgKD < 1.7){
+                };if (matchAvgKD >= 1.5 && matchAvgKD < 1.7){
                     viewMatchKD.text = "Gold"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
                     leagueGold += 1
-                };if (matchAvgKD > 1 && matchAvgKD < 1.5){
+                };if (matchAvgKD >= 1 && matchAvgKD < 1.5){
                     viewMatchKD.text = "Silver"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
                     leagueSilver += 1

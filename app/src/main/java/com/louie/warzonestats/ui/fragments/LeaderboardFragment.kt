@@ -128,7 +128,7 @@ class LeaderboardFragment : Fragment() {
             winsButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             killsButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             // iterate over index within leaderboard
-            for ((leaderboardIndex, player) in winsLeaderboardData!!.withIndex()) {
+            for ((leaderboardIndex, player) in winsLeaderboardData.withIndex()) {
                 // if index is larger than 10 leaderboards break..
                 if (leaderboardIndex > 9) {
                     break

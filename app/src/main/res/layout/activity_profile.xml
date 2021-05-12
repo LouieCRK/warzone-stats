@@ -679,12 +679,13 @@
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#FFFFFF"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            tools:ignore="RtlCompat" />
 
                         <TextView
                             android:id="@+id/gamesBox_gold"
                             android:layout_width="20px"
-                            android:layout_height="100dp"
+                            android:layout_height="150dp"
                             android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
@@ -699,7 +700,8 @@
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="#FFFFFF"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            tools:ignore="RtlCompat" />
 
                         <TextView
                             android:id="@+id/gamesBox_diamond"
