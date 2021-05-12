@@ -45,12 +45,16 @@ class LeaderboardFragment : Fragment() {
                 }
 
                 // concatenate resource id with index to string
-                val viewID = "killsView_$leaderboardIndex"
-                // use viewID to point to our view id
-                val resID = resources.getIdentifier(viewID, "id", activity?.packageName)
+                val killsViewString = "killsView_$leaderboardIndex"
+                val winsViewString = "winsView_$leaderboardIndex"
+                // use killsID to point to our view id
+                val killsID = resources.getIdentifier(killsViewString, "id", activity?.packageName)
+                val winsID = resources.getIdentifier(winsViewString, "id", activity?.packageName)
                 // assign variable to our view object
-                val killsView = inflatedLayout.findViewById<View>(resID)
+                val killsView = inflatedLayout.findViewById<View>(killsID)
+                val winsView = inflatedLayout.findViewById<View>(winsID)
                 killsView.visibility = View.VISIBLE
+                winsView.visibility = View.GONE
 
 
             }
@@ -59,6 +63,7 @@ class LeaderboardFragment : Fragment() {
             winsButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             killsButton.setBackgroundColor(resources.getColor(R.color.grey_2))
 
+            // iterate over index within leaderboard
             for ((leaderboardIndex, player) in killsLeaderboardData!!.withIndex()) {
 
                 // if index is larger than 10 leaderboards break..
@@ -66,11 +71,17 @@ class LeaderboardFragment : Fragment() {
                     break
                 }
 
-                val viewID = "killsView_$leaderboardIndex"
-                val resID = resources.getIdentifier(viewID, "id", activity?.packageName)
-                val killsView = inflatedLayout.findViewById<View>(resID)
+                // concatenate resource id with index to string
+                val killsViewString = "killsView_$leaderboardIndex"
+                val winsViewString = "winsView_$leaderboardIndex"
+                // use killsID to point to our view id
+                val killsID = resources.getIdentifier(killsViewString, "id", activity?.packageName)
+                val winsID = resources.getIdentifier(winsViewString, "id", activity?.packageName)
+                // assign variable to our view object
+                val killsView = inflatedLayout.findViewById<View>(killsID)
+                val winsView = inflatedLayout.findViewById<View>(winsID)
                 killsView.visibility = View.GONE
-
+                winsView.visibility = View.VISIBLE
 
 
             }
