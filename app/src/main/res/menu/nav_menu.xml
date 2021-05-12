@@ -17,12 +17,6 @@
         android:title="Leaderboards" />
 
     <item
-        android:id="@+id/ic_streamer"
-        android:enabled="true"
-        android:icon="@drawable/ic_streamer"
-        android:title="Steamers" />
-
-    <item
         android:id="@+id/ic_fave"
         android:icon="@drawable/ic_fave_red"
         android:title="Favourites" />

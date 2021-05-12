@@ -1545,7 +1545,12 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 6 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 6
+                    --------------------------------------------------------------------------------------------------------------------
+
+                    // MATCH 7
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_6"
                         android:layout_width="match_parent"
@@ -1701,7 +1706,6 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 7 --------------------------------------------------------------------------------------------------------------------
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_7"
                         android:layout_width="match_parent"
