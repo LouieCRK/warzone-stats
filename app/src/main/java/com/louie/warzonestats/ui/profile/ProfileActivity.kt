@@ -134,7 +134,7 @@ class ProfileActivity : AppCompatActivity() {
                 // game mode
                 val gameMode = resources.getIdentifier("modeMatch_$matchIndex", "id", packageName)
                 val viewGameMode = findViewById<View>(gameMode) as TextView
-                // league todo - $LEAGUE
+                // league
                 val lobbyKD = resources.getIdentifier("leagueMatch_$matchIndex", "id", packageName)
                 val viewMatchKD = findViewById<View>(lobbyKD) as TextView
 
@@ -143,11 +143,13 @@ class ProfileActivity : AppCompatActivity() {
                     String.format("%.2f", match.matchStatData.playerAverage + match.matchStatData.playerMedian / 2).toDouble()
                 }
 
+                // if mode is plunder, replace string to be readable
                 if (match.mode == "plunder_trios" || match.mode == "plunder_quads" ){
                     plunderMatch = match.mode.replace("_", " ").toUpperCase(Locale.ROOT)
                     plunderMatchCheck = true
                 }
 
+                // break down string into readable format, assign position view text
                 if (plunderMatchCheck){
                     viewGameMode.text = plunderMatch
                     // error with api, when player queues for a 'plunder match' the position is auto set to 0
@@ -155,6 +157,11 @@ class ProfileActivity : AppCompatActivity() {
                 }else{
                     viewGameMode.text = match.mode.replace("br_br", "br ").toUpperCase(Locale.ROOT)
                     viewMatchPosition.text = match.position.toString()
+                }
+
+                // if player position is 1st place, use green box
+                if (viewMatchPosition.text == "1"){
+                    viewMatchPosition.background = ContextCompat.getDrawable(this@ProfileActivity, box_winner)
                 }
 
                 // assign league name and league color from match average kd
@@ -175,7 +182,7 @@ class ProfileActivity : AppCompatActivity() {
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
                 };if (matchAvgKD == 0.0){
                     viewMatchKD.text = "Unknown"
-                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_grey)
+                    viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_unknown)
                 }
 
                 // assign stat to views text
@@ -190,19 +197,15 @@ class ProfileActivity : AppCompatActivity() {
                 // todo - add functionality for 'recent games - league distribution'
             }
 
+        // todo - work out how to reference player buttons from FaveFragment
+//        var faveButton: Button? = findViewById(R.id.faveButton)
+//        var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
+//
+//        faveButton?.setOnClickListener {
+//            playerButton_0.visibility = View.VISIBLE
+//            playerButton_0.text = playerModel!!.data.uno.toUpperCase(Locale.ROOT)
+//        }
 
-
-
-
-
-//            var faveButton = findViewById<Button>(R.id.faveButton)
-//            // todo - work out how to reference FaveFragment button from ProfileActivity
-//            var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
-//            // todo - add to favourites button onclick
-//            faveButton.setOnClickListener {
-//                playerButton_0.visibility = View.VISIBLE
-//                playerButton_0.text = playerMatches[1].username.toUpperCase()
-//            }
     }
 
     // logic to set lifetime KD and containers to corresponding leagues
