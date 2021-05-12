@@ -629,18 +629,16 @@
                         android:id="@+id/game_Distribution"
                         android:layout_width="380dp"
                         android:layout_height="150dp"
-                        android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="5dp"
-                        android:gravity="top"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/gamesBox_bronze"
                             android:layout_width="20px"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="top"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/chart_bronze"
@@ -661,7 +659,8 @@
                         <TextView
                             android:id="@+id/gamesBox_silver"
                             android:layout_width="20px"
-                            android:layout_height="150dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/chart_silver"
@@ -679,7 +678,8 @@
                         <TextView
                             android:id="@+id/gamesBox_gold"
                             android:layout_width="20px"
-                            android:layout_height="200dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/chart_gold"
@@ -697,7 +697,8 @@
                         <TextView
                             android:id="@+id/gamesBox_diamond"
                             android:layout_width="20px"
-                            android:layout_height="200dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
                             android:background="@drawable/chart_diamond"
@@ -713,9 +714,10 @@
                             android:textSize="14dp" />
 
                         <TextView
-                            android:id="@+id/gamesBox_master"
+                            android:id="@+id/gamesBox_emerald"
                             android:layout_width="20px"
-                            android:layout_height="200dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
                             android:layout_weight="1"
                             android:background="@drawable/box_emerald"
                             android:fontFamily="@font/news_cycle_bold"

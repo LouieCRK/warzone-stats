@@ -115,6 +115,9 @@ class ProfileActivity : AppCompatActivity() {
                 viewWeeklyKills.text = weeklyKills.toString()
 
         // LAST 10 GAMES
+            // league distribution variables, used as counter to assign league distribution height
+            var leagueEmerald = 0;var leagueDiamond = 0; var leagueGold = 0
+            var leagueSilver = 0; var leagueBronze = 0
             // create a matchIndex variable
             var matchIndex = 0
             // iterate over matches within playerMatches
@@ -168,18 +171,23 @@ class ProfileActivity : AppCompatActivity() {
                 if (matchAvgKD > 2){
                     viewMatchKD.text = "Emerald"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
+                    leagueEmerald += 1
                 };if (matchAvgKD > 1.7 && matchAvgKD < 2){
                     viewMatchKD.text = "Diamond"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
+                    leagueDiamond += 1
                 };if (matchAvgKD > 1.5 && matchAvgKD < 1.7){
                     viewMatchKD.text = "Gold"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
+                    leagueGold += 1
                 };if (matchAvgKD > 1 && matchAvgKD < 1.5){
                     viewMatchKD.text = "Silver"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
+                    leagueSilver += 1
                 };if (matchAvgKD > 0 && matchAvgKD < 1){
                     viewMatchKD.text = "Bronze"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
+                    leagueBronze += 1
                 };if (matchAvgKD == 0.0){
                     viewMatchKD.text = "Unknown"
                     viewMatchKD.background = ContextCompat.getDrawable(this@ProfileActivity, box_unknown)
@@ -193,9 +201,21 @@ class ProfileActivity : AppCompatActivity() {
                 if (matchIndex >= 10){
                     break
                 }
-
-                // todo - add functionality for 'recent games - league distribution'
             }
+
+        // assign variable to text view of league distribution bars
+        val emeraldBar = findViewById<View>(R.id.gamesBox_emerald) as TextView
+        val diamondBar = findViewById<View>(R.id.gamesBox_diamond) as TextView
+        val goldBar = findViewById<View>(R.id.gamesBox_gold) as TextView
+        val silverBar = findViewById<View>(R.id.gamesBox_silver) as TextView
+        val bronzeBar = findViewById<View>(R.id.gamesBox_bronze) as TextView
+
+        // assign layout heights to distribution bars depending on their value
+        emeraldBar.layoutParams.height  = leagueEmerald * 20
+        diamondBar.layoutParams.height = leagueDiamond * 20
+        goldBar.layoutParams.height = leagueGold * 20
+        silverBar.layoutParams.height = leagueSilver * 20
+        bronzeBar.layoutParams.height = leagueBronze * 20
 
         // todo - work out how to reference player buttons from FaveFragment
 //        var faveButton: Button? = findViewById(R.id.faveButton)
