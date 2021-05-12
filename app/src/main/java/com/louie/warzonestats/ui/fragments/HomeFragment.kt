@@ -1,7 +1,6 @@
 package com.louie.warzonestats.ui.fragments
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,7 @@ import com.louie.warzonestats.ui.MainActivity
 
 @Suppress("DEPRECATION")
 class HomeFragment : Fragment() {
-    lateinit var userEntry : TextInputEditText
+    private lateinit var userEntry : TextInputEditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +31,7 @@ class HomeFragment : Fragment() {
         val psnButton = inflatedLayout.findViewById<Button>(R.id.psButton)
         val battleButton = inflatedLayout.findViewById<Button>(R.id.battleButton)
         // username = user input text
-        userEntry = inflatedLayout.findViewById<TextInputEditText>(R.id.userEntry)
+        userEntry = inflatedLayout.findViewById(R.id.userEntry)
         var platform = ""
 
         // platform button listeners to change platform value and button appearance
@@ -62,25 +61,27 @@ class HomeFragment : Fragment() {
             val matchModel = MatchNetworkService.getMatchData(username, platform)
 
             if (username == ""){
-                var toast = Toast.makeText(context, "Error: Please enter a Username", Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                val toast = Toast.makeText(context, "Error: Please enter a Username", Toast.LENGTH_SHORT)
                 toast.show()
             }
             if (platform == ""){
-                var toast = Toast.makeText(context, "Error: Please select a Platform", Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                val toast = Toast.makeText(context, "Error: Please select a Platform", Toast.LENGTH_SHORT)
+                toast.show()
+            }
+            if (username == "" && platform == ""){
+                val toast = Toast.makeText(context, "Error: Please a Username & Select a Platform", Toast.LENGTH_SHORT)
                 toast.show()
             } else if (playerModel != null && matchModel != null){
                 PlayerService.currentPlayerModel = playerModel
                 MatchService.currentMatchModel = matchModel
-                var mainActivity = this.requireActivity() as MainActivity
+                val mainActivity = this.requireActivity() as MainActivity
                 mainActivity.navigateToPlayerProfile()
             } else if (playerModel == null && matchModel == null) {
-                var toast = Toast.makeText(context, "Error: User not Found", Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
+                val toast = Toast.makeText(context, "Error: User not Found", Toast.LENGTH_SHORT)
                 toast.show()
             }
         }
+
         return inflatedLayout
     }
 }
