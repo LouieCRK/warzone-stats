@@ -48,7 +48,8 @@
                     android:layout_height="match_parent"
                     android:background="@color/grey_3"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
 
                     <Button
                         android:id="@+id/spacer"
@@ -685,7 +686,7 @@
                         <TextView
                             android:id="@+id/gamesBox_gold"
                             android:layout_width="20px"
-                            android:layout_height="150dp"
+                            android:layout_height="100dp"
                             android:layout_gravity="bottom"
                             android:layout_marginRight="10dp"
                             android:layout_weight="1"
@@ -774,8 +775,11 @@
                         android:textColor="#FFFFFF"
                         android:textSize="18dp" />
 
-// LAST 20 MATCHES ------------------------------------------------------------------------------------------------------------
-// MATCH 1 --------------------------------------------------------------------------------------------------------------------
+                    // LAST 20 MATCHES
+                    ------------------------------------------------------------------------------------------------------------
+                    // MATCH 1
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_1"
                         android:layout_width="match_parent"
@@ -936,7 +940,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 2 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 2
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_2"
                         android:layout_width="match_parent"
@@ -1092,7 +1098,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 3 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 3
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_3"
                         android:layout_width="match_parent"
@@ -1248,7 +1256,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 4 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 4
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_4"
                         android:layout_width="match_parent"
@@ -1404,7 +1414,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
- // MATCH 5 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 5
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_5"
                         android:layout_width="match_parent"
@@ -1876,7 +1888,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 8 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 8
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_8"
                         android:layout_width="match_parent"
@@ -2032,7 +2046,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 9 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 9
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_9"
                         android:layout_width="match_parent"
@@ -2188,7 +2204,9 @@
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 
-// MATCH 10 --------------------------------------------------------------------------------------------------------------------
+                    // MATCH 10
+                    --------------------------------------------------------------------------------------------------------------------
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/matchView_10"
                         android:layout_width="match_parent"
