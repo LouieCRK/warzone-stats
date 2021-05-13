@@ -30,6 +30,7 @@
         android:layout_height="match_parent"
 
 
+        android:background="@color/grey_3"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
@@ -143,8 +144,8 @@
                         android:focusable="auto"
                         android:fontFamily="@font/news_cycle_bold"
                         android:minHeight="55dp"
+                        android:text="$FAVE"
                         android:textSize="15dp"
-                        android:visibility="gone"
                         app:cornerRadius="25px"
                         app:icon="@drawable/ic_fave_red"
                         app:iconPadding="5dp"
@@ -161,8 +162,8 @@
                         android:focusable="auto"
                         android:fontFamily="@font/news_cycle_bold"
                         android:minHeight="55dp"
+                        android:text="$FAVE"
                         android:textSize="15dp"
-                        android:visibility="gone"
                         app:cornerRadius="25px"
                         app:icon="@drawable/ic_fave_red"
                         app:iconPadding="5dp"
@@ -179,8 +180,8 @@
                         android:focusable="auto"
                         android:fontFamily="@font/news_cycle_bold"
                         android:minHeight="55dp"
+                        android:text="$FAVE"
                         android:textSize="15dp"
-                        android:visibility="gone"
                         app:cornerRadius="25px"
                         app:icon="@drawable/ic_fave_red"
                         app:iconPadding="5dp"
@@ -197,8 +198,8 @@
                         android:focusable="auto"
                         android:fontFamily="@font/news_cycle_bold"
                         android:minHeight="55dp"
+                        android:text="$FAVE"
                         android:textSize="15dp"
-                        android:visibility="gone"
                         app:cornerRadius="25px"
                         app:icon="@drawable/ic_fave_red"
                         app:iconPadding="5dp"
