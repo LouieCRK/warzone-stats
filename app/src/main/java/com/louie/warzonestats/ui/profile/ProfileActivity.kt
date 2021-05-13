@@ -192,13 +192,15 @@ class ProfileActivity : AppCompatActivity() {
 
         // todo - work out how to reference player buttons from FaveFragment
 //        var faveButton: Button? = findViewById(R.id.faveButton)
+//        // player button comes out as null, it knows the ID of the viewButton,
+//        // but can't reference it because it's not set in the same context (FaveFragment)
 //        var playerButton_0 = findViewById<Button>(R.id.playerButton_0)
 //
 //        faveButton?.setOnClickListener {
 //            playerButton_0.visibility = View.VISIBLE
 //            playerButton_0.text = playerModel!!.data.uno.toUpperCase(Locale.ROOT)
 //        }
-    }
+}
 
     // logic to set lifetime KD, league name and containers to corresponding leagues
     private fun leagueKD(lifetimeKD: Double, emptyLeague: String): String {

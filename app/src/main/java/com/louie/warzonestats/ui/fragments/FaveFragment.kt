@@ -21,7 +21,7 @@ class FaveFragment : Fragment() {
 //        val playerButton_0 = inflatedLayout.findViewById<Button>(R.id.playerButton_0)
 //
 //        playerButton_0.setOnClickListener {
-//            playerButton_0.text = "USERNAME"
+//            playerButton_0.text = "$USERNAME"
 //        }
 
         return inflatedLayout
