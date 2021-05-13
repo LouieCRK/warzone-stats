@@ -181,8 +181,8 @@ class ProfileActivity : AppCompatActivity() {
         val silverBar = findViewById<View>(R.id.gamesBox_silver) as TextView
         val bronzeBar = findViewById<View>(R.id.gamesBox_bronze) as TextView
 
-        var leagueSum = (leagueEmerald + leagueDiamond + leagueGold + leagueSilver + leagueBronze)
-        var finalLeagueSum = (525 / leagueSum)
+        val leagueSum = (leagueEmerald + leagueDiamond + leagueGold + leagueSilver + leagueBronze)
+        val finalLeagueSum = (525 / leagueSum)
         // assign layout heights to distribution bars depending on their value
         emeraldBar.layoutParams.height  = (leagueEmerald * finalLeagueSum)
         diamondBar.layoutParams.height = (leagueDiamond * finalLeagueSum)
@@ -418,53 +418,53 @@ class ProfileActivity : AppCompatActivity() {
 
     // logic to set lifetime win percentage and containers to corresponding leagues
     private fun leagueKPG(lifetimeKPG: Double, emptyLeague: String) {
-        val viewLeagueKPGbox = findViewById<View>(R.id.box_killsPerGame) as TextView
-        var viewLeagueKPGtext = findViewById<View>(R.id.league_killsPerGame_text) as TextView
-        val viewLifetimeKPG = findViewById<View>(R.id.lifetime_killsPerGame_text) as TextView
+        val leagueBoxKPG = findViewById<View>(R.id.box_killsPerGame) as TextView
+        val leagueTextKPG = findViewById<View>(R.id.league_killsPerGame_text) as TextView
+        val lifetimeTextKPG = findViewById<View>(R.id.lifetime_killsPerGame_text) as TextView
         var league = emptyLeague
 
         when {
             lifetimeKPG >= 25.0 -> {
                 league = "legend"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_legend)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_legend)
             }
             lifetimeKPG in 9.72..24.99 -> {
                 league = "master"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_master)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_master)
             }
             lifetimeKPG in 3.13..9.71 -> {
                 league = "emerald"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_emerald)
             }
             lifetimeKPG in 1.89..3.12 -> {
                 league = "diamond"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_diamond)
             }
             lifetimeKPG in 0.99..1.88 -> {
                 league = "gold"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_gold)
             }
             lifetimeKPG in 0.19..0.98 -> {
                 league = "silver"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_silver)
             }
             lifetimeKPG < 0.19 -> {
                 league = "bronze"
-                viewLeagueKPGtext.text = league
-                viewLifetimeKPG.text = lifetimeKPG.toString()
-                viewLeagueKPGbox.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
+                leagueTextKPG.text = league
+                lifetimeTextKPG.text = lifetimeKPG.toString()
+                leagueBoxKPG.background = ContextCompat.getDrawable(this@ProfileActivity, box_bronze)
             }
         }
         return
