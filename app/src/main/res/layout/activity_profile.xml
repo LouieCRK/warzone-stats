@@ -168,7 +168,7 @@
                             android:text="$KD"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="27dp" />
 
                         <TextView
@@ -252,7 +252,7 @@
                             android:text="$WINS"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="27dp"
                             android:translationX="36.5dp"
                             android:translationY="30dp" />
@@ -289,7 +289,7 @@
                             android:text="$KILLS"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="27dp"
                             android:translationX="229dp"
                             android:translationY="30dp" />
@@ -377,7 +377,7 @@
                             android:text="$WIN%"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="27dp"
                             android:translationX="35dp"
                             android:translationY="30dp" />
@@ -415,7 +415,7 @@
                             android:text="$KPG"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="27dp"
                             android:translationX="-37dp"
                             android:translationY="30dp" />
@@ -557,7 +557,7 @@
                             android:text="$KILLS"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="24dp"
                             android:translationX="-29dp"
                             android:translationY="35dp" />
@@ -579,7 +579,7 @@
                             android:text="$KD"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="24dp"
                             android:translationX="28dp"
                             android:translationY="35dp" />
@@ -601,7 +601,7 @@
                             android:text="$KPG"
                             android:textAlignment="center"
                             android:textAllCaps="true"
-                            android:textColor="@color/material_on_surface_emphasis_medium"
+                            android:textColor="@color/black"
                             android:textSize="24dp"
                             android:translationY="7.5dp" />
 
@@ -893,7 +893,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1053,7 +1053,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1211,7 +1211,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1369,7 +1369,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1527,7 +1527,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1688,7 +1688,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -1843,7 +1843,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -2001,7 +2001,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -2159,7 +2159,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>
@@ -2317,7 +2317,7 @@
                                     android:text="$POS"
                                     android:textAlignment="center"
                                     android:textAllCaps="true"
-                                    android:textColor="@color/material_on_surface_emphasis_medium"
+                                    android:textColor="@color/black"
                                     android:textSize="22dp" />
 
                             </LinearLayout>

@@ -31,39 +31,39 @@ class LeaderboardFragment : Fragment() {
         val killsButton = inflatedLayout.findViewById<Button>(R.id.killsLB_button)
         val winsButton = inflatedLayout.findViewById<Button>(R.id.winsLB_button)
 
-            // loop to assign data to kills leaderboard data to view
-            for ((leaderboardIndex, player) in killsLeaderboardData!!.withIndex()) {
-                // if index is larger than 10 leaderboards break..
-                if (leaderboardIndex > 9) {
-                    break
-                }
-                // concatenate resource id with index to string
-                val killsDataString = "killsLB_kills_$leaderboardIndex"
-                val userDataString = "killsLB_username_$leaderboardIndex"
-                val platformDataString= "killsLB_platform_$leaderboardIndex"
-                // use killsID to point to our view id
-                val killsDataID = resources.getIdentifier(killsDataString, "id", activity?.packageName)
-                val userDataID = resources.getIdentifier(userDataString, "id", activity?.packageName)
-                val platformDataID = resources.getIdentifier(platformDataString, "id", activity?.packageName)
-                // assign variable to our view object
-                val killsData = inflatedLayout.findViewById<TextView>(killsDataID)
-                val userData = inflatedLayout.findViewById<TextView>(userDataID)
-                val platformData = inflatedLayout.findViewById<ImageView>(platformDataID)
-                // set data to view text
-                killsData.text = player.kills.toString()
-                userData.text = player.username.toUpperCase()
-
-                // case statement to set the drawable resource to the corresponding platform image
-                when (player.user.platform == "battle"){
-                    true -> platformData.setImageResource(R.drawable.ic_battle)
-                }
-                when (player.user.platform == "xbl"){
-                    true -> platformData.setImageResource(R.drawable.ic_xbox)
-                }
-                when (player.user.platform == "psn"){
-                    true -> platformData.setImageResource(R.drawable.ic_psn)
-                }
+        // loop to assign data to kills leaderboard data to view
+        for ((leaderboardIndex, player) in killsLeaderboardData!!.withIndex()) {
+            // if index is larger than 10 leaderboards break..
+            if (leaderboardIndex > 9) {
+                break
             }
+            // concatenate resource id with index to string
+            val killsDataString = "killsLB_kills_$leaderboardIndex"
+            val userDataString = "killsLB_username_$leaderboardIndex"
+            val platformDataString= "killsLB_platform_$leaderboardIndex"
+            // use killsID to point to our view id
+            val killsDataID = resources.getIdentifier(killsDataString, "id", activity?.packageName)
+            val userDataID = resources.getIdentifier(userDataString, "id", activity?.packageName)
+            val platformDataID = resources.getIdentifier(platformDataString, "id", activity?.packageName)
+            // assign variable to our view object
+            val killsData = inflatedLayout.findViewById<TextView>(killsDataID)
+            val userData = inflatedLayout.findViewById<TextView>(userDataID)
+            val platformData = inflatedLayout.findViewById<ImageView>(platformDataID)
+            // set data to view text
+            killsData.text = player.kills.toString()
+            userData.text = player.username.toUpperCase()
+
+            // case statement to set the drawable resource to the corresponding platform image
+            when (player.user.platform == "battle"){
+                true -> platformData.setImageResource(R.drawable.ic_battle)
+            }
+            when (player.user.platform == "xbl"){
+                true -> platformData.setImageResource(R.drawable.ic_xbox)
+            }
+            when (player.user.platform == "psn"){
+                true -> platformData.setImageResource(R.drawable.ic_psn)
+            }
+        }
 
         // loop to assign data to wins leaderboard data to view
         for ((leaderboardIndex, player) in winsLeaderboardData!!.withIndex()) {
@@ -104,7 +104,7 @@ class LeaderboardFragment : Fragment() {
             killsButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             winsButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             // iterate over index within leaderboard
-            for ((leaderboardIndex, player) in killsLeaderboardData.withIndex()) {
+            for ((leaderboardIndex) in killsLeaderboardData.withIndex()) {
                 // if index is larger than 10 leaderboards break..
                 if (leaderboardIndex > 9) {
                     break
@@ -128,7 +128,7 @@ class LeaderboardFragment : Fragment() {
             winsButton.setBackgroundColor(resources.getColor(R.color.grey_0))
             killsButton.setBackgroundColor(resources.getColor(R.color.grey_2))
             // iterate over index within leaderboard
-            for ((leaderboardIndex, player) in winsLeaderboardData.withIndex()) {
+            for ((leaderboardIndex) in winsLeaderboardData.withIndex()) {
                 // if index is larger than 10 leaderboards break..
                 if (leaderboardIndex > 9) {
                     break
