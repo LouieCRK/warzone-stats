@@ -3,19 +3,21 @@
 
     <item
         android:id="@+id/ic_home"
-        android:enabled="true"
+        android:checkable="true"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="Home" />
 
     <item
         android:id="@+id/ic_leaderboard"
-        android:enabled="true"
+        android:checkable="true"
         android:icon="@drawable/ic_leaderboard"
         android:title="Leaderboards" />
 
     <item
         android:id="@+id/ic_fave"
-        android:icon="@drawable/ic_fave_red"
+        android:checkable="true"
+        android:checked="false"
+        android:icon="@drawable/ic_fave"
         android:title="Favourites" />
 
 </menu>
