@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="2dp"
-            android:paddingBottom="85dp"
+            android:paddingBottom="80dp"
             tools:context=".ui.fragments.HomeFragment">
 
             <LinearLayout
