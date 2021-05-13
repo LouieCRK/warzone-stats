@@ -199,6 +199,7 @@ class ProfileActivity : AppCompatActivity() {
 //        faveButton?.setOnClickListener {
 //            playerButton_0.visibility = View.VISIBLE
 //            playerButton_0.text = playerModel!!.data.uno.toUpperCase(Locale.ROOT)
+//            playerButton_0.
 //        }
 }
 
