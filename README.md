@@ -27,6 +27,8 @@ Platform: Battle.net
 Username: Fantom1er,
 Platform: Playstation
 
+Application was tested on the 'Pixel 4 XL (API 30)'
+
 ![Home Page](https://user-images.githubusercontent.com/55953362/117538651-2065dd00-afff-11eb-85d3-f272dc09c4d3.png)    ___________
 ![Profile Page](https://user-images.githubusercontent.com/55953362/117538653-2491fa80-afff-11eb-90e5-dfa4d064c753.png)
 ![Profile Page - Latest matches](https://user-images.githubusercontent.com/55953362/117538661-2956ae80-afff-11eb-98e7-c94b7278b670.png)    ___________
