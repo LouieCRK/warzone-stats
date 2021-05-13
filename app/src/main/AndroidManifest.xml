@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.louie.warzonestats">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WarzoneStats">
+        <service
+            android:name=".services.LeaderboardKillsService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
 
         <activity android:name=".ui.profile.ProfileActivity" />
         <activity android:name=".ui.MainActivity">
