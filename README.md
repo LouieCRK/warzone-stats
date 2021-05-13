@@ -18,13 +18,13 @@ It also ecourages players to improve, as they strive to get to the highest rank!
 
 User Accounts to Test:
 
-Username: Crooking
+Username: Crooking,
 Platform: Xbox Live
 
-Username: AYDAN#11691
+Username: AYDAN#11691,
 Platform: Battle.net
 
-Username: Fantom1er
+Username: Fantom1er,
 Platform: Playstation
 
 ![Home Page](https://user-images.githubusercontent.com/55953362/117538651-2065dd00-afff-11eb-85d3-f272dc09c4d3.png)    ___________
