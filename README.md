@@ -1,6 +1,5 @@
 # Warzone Stats
-## A statistics tracking application for the video game 'Call of Duty: Modern Warfare (Warzone)'
-## Built for Android devices
+## A statistics tracking application for 'Call of Duty: Modern Warfare (Warzone)', Built for Android devices.
 
 User Accounts to Test:
 
