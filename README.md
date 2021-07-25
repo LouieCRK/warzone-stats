@@ -1,3 +1,4 @@
+
 # Warzone Stats
 ## A player/match statistics tracker for Call of Duty: Modern Warfare (Warzone), built for Android devices.
 ### This project was created for ny Mobile Applications module at university.
@@ -12,7 +13,4 @@ User Accounts to Test:
 
 * Username: Fantom1er - Platform: Playstation
 
-![Home Page](https://user-images.githubusercontent.com/55953362/126902791-93219fc1-ab1e-4a9f-a28a-6153c99c8717.png)
-![Profile Page](https://user-images.githubusercontent.com/55953362/126902798-1685ac63-df0c-4d9e-b820-8a6d4ead84cf.png)
-
-
+![HomePage/ProfilePage/LeaderboardPage](https://user-images.githubusercontent.com/55953362/126903436-5f61527a-1b5d-4b17-89f7-952f0c4e9ef1.png)
