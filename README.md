@@ -14,3 +14,5 @@ User Accounts to Test:
 * Username: Fantom1er - Platform: Playstation
 
 ![HomePage/ProfilePage/LeaderboardPage](https://user-images.githubusercontent.com/55953362/126903436-5f61527a-1b5d-4b17-89f7-952f0c4e9ef1.png)
+
+I was unable to finish some of the functionality due to many other deadlines.
