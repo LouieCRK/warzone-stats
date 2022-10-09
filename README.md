@@ -15,4 +15,4 @@ User Accounts to Test:
 
 ![HomePage/ProfilePage/LeaderboardPage](https://user-images.githubusercontent.com/55953362/126903436-5f61527a-1b5d-4b17-89f7-952f0c4e9ef1.png)
 
-I was unable to finish some functionality due to many other deadlines.
+I was unable to finish some functionality due to many other deadlines
