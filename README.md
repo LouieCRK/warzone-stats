@@ -12,8 +12,9 @@ User Accounts to Test:
 
 * Username: Fantom1er - Platform: Playstation
 
-![Final Screen Showcase-min](https://github.com/LouieCRK/warzone-stats/assets/55953362/d7dbb081-031f-44ad-af62-1d4f35e21415)
-![Home Page](https://github.com/LouieCRK/warzone-stats/assets/55953362/1c5388f5-9fc8-4856-b830-88d47a5e5406)
-![Profile Page](https://github.com/LouieCRK/warzone-stats/assets/55953362/dd24ec6a-e09c-4bf6-b41b-331695b9388a)
-![Profile Page - Match breakdown](https://github.com/LouieCRK/warzone-stats/assets/55953362/8e5947ea-2674-4b24-b347-5edae2baac57)
-![Profile Page - Latest matches](https://github.com/LouieCRK/warzone-stats/assets/55953362/b2b46642-3899-4dd7-a7e0-6fc8ac26b3ec)
+![Final Screen Showcase-min](https://github.com/LouieCRK/warzone-stats/assets/55953362/7e631e96-aac1-4848-81c7-b219a2e2fcf0)
+![Home Page](https://github.com/LouieCRK/warzone-stats/assets/55953362/38097f02-7c96-4bc2-ae40-f6d1be987ad6)
+![Profile Page](https://github.com/LouieCRK/warzone-stats/assets/55953362/57aa7e08-c659-4d2c-b376-fdd63535546a)
+![Profile Page - Match breakdown](https://github.com/LouieCRK/warzone-stats/assets/55953362/292f2615-f2df-4cbc-a489-a36e88c6dfa4)
+![Profile Page - Latest matches](https://github.com/LouieCRK/warzone-stats/assets/55953362/236a12be-8e88-482c-9ca3-287572832dea)
+
