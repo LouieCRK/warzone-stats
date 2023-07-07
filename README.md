@@ -1,7 +1,6 @@
 
 # Warzone Stats
 ## A player/match statistics tracker for Call of Duty: Modern Warfare (Warzone), built for Android devices.
-### This project was created for a Mobile Applications module at university.
 
 (Application was tested on the Pixel 4 XL - API 30)
 
