@@ -12,6 +12,4 @@ User Accounts to Test:
 
 * Username: Fantom1er - Platform: Playstation
 
-![HomePage/ProfilePage/LeaderboardPage](https://user-images.githubusercontent.com/55953362/126903436-5f61527a-1b5d-4b17-89f7-952f0c4e9ef1.png)
-
-I was unable to finish some functionality due to many other deadlines
+![Final Screen Showcase-min](https://github.com/LouieCRK/warzone-stats/assets/55953362/d7dbb081-031f-44ad-af62-1d4f35e21415)
